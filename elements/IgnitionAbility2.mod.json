@@ -1,0 +1,9 @@
+{
+  "_fv": 33,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "X",
+    "keyBindingName": "Ignition Ability 2",
+    "keyBindingCategoryKey": "misc"
+  }
+}

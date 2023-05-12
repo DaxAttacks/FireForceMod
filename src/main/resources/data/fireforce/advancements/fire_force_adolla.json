@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "fireforce:fire_force_emblem"
+    },
+    "title": {
+      "translate": "advancements.fire_force_adolla.title"
+    },
+    "description": {
+      "translate": "advancements.fire_force_adolla.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "fire_force_adolla": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:overworld"
+      }
+    }
+  },
+  "parent": "minecraft:story/root"
+}

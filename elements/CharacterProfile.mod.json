@@ -1,0 +1,168 @@
+{
+  "_fv": 33,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 500,
+    "height": 500,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "updatedui1.png",
+          "use1Xscale": true,
+          "name": "updatedui1.png",
+          "x": 66,
+          "y": -8
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "STATS",
+          "onClick": {
+            "name": "Characterprofilestatsopen"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "STATS",
+          "x": 211,
+          "y": 58
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Infernal",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "GenInfernal"
+          },
+          "name": "Infernal",
+          "x": 187,
+          "y": 38
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Second Generation",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Gen2"
+          },
+          "name": "Second Generation",
+          "x": 167,
+          "y": 39
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Third Generation",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Gen3"
+          },
+          "name": "Third Generation",
+          "x": 167,
+          "y": 39
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fourth Generation",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Gen4"
+          },
+          "name": "Fourth Generation",
+          "x": 167,
+          "y": 39
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Hybrid",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Gen6"
+          },
+          "name": "Hybrid",
+          "x": 193,
+          "y": 38
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Demon Infernal",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Gen5"
+          },
+          "name": "Demon Infernal",
+          "x": 172,
+          "y": 39
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:PlayerName>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "<VAR:PlayerName>",
+          "x": 192,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level: <VAR:integer:LVL>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Level: <VAR:integer:LVL>",
+          "x": 202,
+          "y": 226
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

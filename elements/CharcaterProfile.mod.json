@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "P",
+    "keyBindingName": "Charcater Profile",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "CharacterProfileKeybind"
+    }
+  }
+}

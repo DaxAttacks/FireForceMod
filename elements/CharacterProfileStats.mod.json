@@ -1,0 +1,356 @@
+{
+  "_fv": 33,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 500,
+    "height": 500,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Infernal",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "GenInfernal"
+          },
+          "name": "Infernal",
+          "x": 187,
+          "y": 38
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Second Generation",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Gen2"
+          },
+          "name": "Second Generation",
+          "x": 167,
+          "y": 39
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Third Generation",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Gen3"
+          },
+          "name": "Third Generation",
+          "x": 167,
+          "y": 39
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fourth Generation",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Gen4"
+          },
+          "name": "Fourth Generation",
+          "x": 167,
+          "y": 39
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Hybrid",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Gen6"
+          },
+          "name": "Hybrid",
+          "x": 193,
+          "y": 38
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Demon Infernal",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "Gen5"
+          },
+          "name": "Demon Infernal",
+          "x": 172,
+          "y": 39
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:PlayerName>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "<VAR:PlayerName>",
+          "x": 192,
+          "y": 25
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level: <VAR:integer:LVL>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Level: <VAR:integer:LVL>",
+          "x": 203,
+          "y": 226
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "updatedui2.png",
+          "use1Xscale": true,
+          "name": "updatedui2.png",
+          "x": 67,
+          "y": -9
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Speed: <VAR:integer:FireSpeed>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Speed: <VAR:integer:FireSpeed>",
+          "x": 180,
+          "y": 92
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "+",
+          "onClick": {
+            "name": "HealthStat"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "+",
+          "x": 146,
+          "y": 63
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "+",
+          "onClick": {
+            "name": "Fireresistancestat"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "+",
+          "x": 146,
+          "y": 112
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Heat Resistance: <VAR:integer:FireResistance>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Heat Resistance: <VAR:integer:FireResistance>",
+          "x": 179,
+          "y": 117
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "+",
+          "onClick": {
+            "name": "FireSpeedstats"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "+",
+          "x": 146,
+          "y": 87
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Skill Points: <VAR:integer:SP>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Skill Points: <VAR:integer:SP>",
+          "x": 161,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "",
+          "x": 182,
+          "y": 127
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Health: <VAR:integer:FireHealth>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Health: <VAR:integer:FireHealth>",
+          "x": 179,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "+",
+          "onClick": {
+            "name": "Firedefensestat"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "+",
+          "x": 147,
+          "y": 136
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Adolla Burst: <VAR:integer:adollalburstevel>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Adolla Burst: <VAR:integer:adollalburstevel>",
+          "x": 181,
+          "y": 190
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fire Defense <VAR:integer:FireResistancedefense>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Fire Defense <VAR:integer:FireResistancedefense>",
+          "x": 178,
+          "y": 140
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "+",
+          "onClick": {
+            "name": "Adollastat"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "+",
+          "x": 147,
+          "y": 184
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<",
+          "onClick": {
+            "name": "CharacterProfileKeybind"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "<",
+          "x": 136,
+          "y": 216
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "+",
+          "onClick": {
+            "name": "Firepowerstat"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "+",
+          "x": 147,
+          "y": 160
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fire Power: <VAR:integer:FirePower>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Fire Power: <VAR:integer:FirePower>",
+          "x": 179,
+          "y": 166
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

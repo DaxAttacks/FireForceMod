@@ -1,0 +1,1381 @@
+{
+  "mod_elements": [
+    {
+      "name": "GenerationRandomizer",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generation_randomizer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "XP",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "Test",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Keys"
+    },
+    {
+      "name": "FireArrow",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Ignition Abilities/Third Gen"
+    },
+    {
+      "name": "IgnitionAbility1",
+      "type": "keybind",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ignition_ability_1",
+      "path": "~/Keys/Keybinds"
+    },
+    {
+      "name": "IgnitionAbility2",
+      "type": "keybind",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ignition_ability_2",
+      "path": "~/Keys/Keybinds"
+    },
+    {
+      "name": "IgnitionAbility3",
+      "type": "keybind",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ignition_ability_3",
+      "path": "~/Keys/Keybinds"
+    },
+    {
+      "name": "IgnitionAbility4",
+      "type": "keybind",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "ignition_ability_4",
+      "path": "~/Keys/Keybinds"
+    },
+    {
+      "name": "Testz",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testz",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Keys"
+    },
+    {
+      "name": "Generationset3",
+      "type": "command",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generationset_3",
+      "path": "~/Commands/Commands/Generation Set"
+    },
+    {
+      "name": "Generationset2",
+      "type": "command",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generationset_2",
+      "path": "~/Commands/Commands/Generation Set"
+    },
+    {
+      "name": "GenerationsetHybrid",
+      "type": "command",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generationset_hybrid",
+      "path": "~/Commands/Commands/Generation Set"
+    },
+    {
+      "name": "GenerationsetInfernal",
+      "type": "command",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generationset_infernal",
+      "path": "~/Commands/Commands/Generation Set"
+    },
+    {
+      "name": "GenerationsetDemonInfernal",
+      "type": "command",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generationset_demon_infernal",
+      "path": "~/Commands/Commands/Generation Set"
+    },
+    {
+      "name": "GetHyrbid",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_hyrbid",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures"
+    },
+    {
+      "name": "GetDemonInfernal",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_demon_infernal",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures"
+    },
+    {
+      "name": "GetInfernal",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_infernal",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures"
+    },
+    {
+      "name": "GetThirdGen",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_third_gen",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures"
+    },
+    {
+      "name": "Getsecondgen",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getsecondgen",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures"
+    },
+    {
+      "name": "GenerationRandomize",
+      "type": "command",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generation_randomize",
+      "path": "~/Commands/Commands/Generation Set"
+    },
+    {
+      "name": "AdollaBurstAbility",
+      "type": "keybind",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "adolla_burst_ability",
+      "path": "~/Keys/Keybinds"
+    },
+    {
+      "name": "CharcaterProfile",
+      "type": "keybind",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "charcater_profile",
+      "path": "~/Keys/Keybinds"
+    },
+    {
+      "name": "GenInfernal",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gen_infernal",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/GUI Procedures"
+    },
+    {
+      "name": "Gen2",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gen_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/GUI Procedures"
+    },
+    {
+      "name": "Gen3",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gen_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/GUI Procedures"
+    },
+    {
+      "name": "Gen4",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gen_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/GUI Procedures"
+    },
+    {
+      "name": "Gen5",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gen_5",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/GUI Procedures"
+    },
+    {
+      "name": "Gen6",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gen_6",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/GUI Procedures"
+    },
+    {
+      "name": "CharacterProfile",
+      "type": "gui",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "character_profile",
+      "path": "~/GUI"
+    },
+    {
+      "name": "PlayerNameInUI",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_name_in_ui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/GUI Procedures"
+    },
+    {
+      "name": "CharacterProfileKeybind",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "character_profile_keybind",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/GUI Procedures"
+    },
+    {
+      "name": "XP2",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "XP3",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "XP4",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "XP5",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "XP6",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_6",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "XP7",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_7",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "HybridEyes",
+      "type": "livingentity",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hybrid_eyes",
+      "path": "~/Models/Models Entitiys"
+    },
+    {
+      "name": "HybridEye",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hybrid_eye",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Models"
+    },
+    {
+      "name": "FireForceAdolla",
+      "type": "achievement",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_force_adolla",
+      "path": "~/Advancements"
+    },
+    {
+      "name": "FireForceEmblem",
+      "type": "item",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_force_emblem",
+      "path": "~/Items"
+    },
+    {
+      "name": "Joinsworld",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "joinsworld",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Advancements/Advancement Procedures"
+    },
+    {
+      "name": "Customhybrid1",
+      "type": "livingentity",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customhybrid_1",
+      "path": "~/Models/Models Entitiys"
+    },
+    {
+      "name": "CustomHbrid2",
+      "type": "livingentity",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "custom_hbrid_2",
+      "path": "~/Models/Models Entitiys"
+    },
+    {
+      "name": "Arroweyes",
+      "type": "livingentity",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arroweyes",
+      "path": "~/Models/Models Entitiys"
+    },
+    {
+      "name": "Arroweye",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arroweye",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Models"
+    },
+    {
+      "name": "IgnitionAbilitySet",
+      "type": "command",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ignition_ability_set",
+      "path": "~/Commands/Commands"
+    },
+    {
+      "name": "GetArrow",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_arrow",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures/Get Ignition Ability"
+    },
+    {
+      "name": "CharacterProfileStats",
+      "type": "gui",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "character_profile_stats",
+      "path": "~/GUI"
+    },
+    {
+      "name": "Shinraseyes",
+      "type": "livingentity",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shinraseyes",
+      "path": "~/Models/Models Entitiys"
+    },
+    {
+      "name": "Characterprofilestatsopen",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "characterprofilestatsopen",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/GUI Procedures"
+    },
+    {
+      "name": "HealthStat",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_stat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Stats"
+    },
+    {
+      "name": "Firepowerstat",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firepowerstat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Stats"
+    },
+    {
+      "name": "Fireresistancestat",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireresistancestat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Stats"
+    },
+    {
+      "name": "Firedefensestat",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firedefensestat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Stats"
+    },
+    {
+      "name": "FireSpeedstats",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_speedstats",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Stats"
+    },
+    {
+      "name": "Adollastat",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adollastat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Stats"
+    },
+    {
+      "name": "Adollalevelstat",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adollalevelstat",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/GUI Procedures"
+    },
+    {
+      "name": "Testeyes1",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testeyes_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Models"
+    },
+    {
+      "name": "Testeyes2",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testeyes_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Models"
+    },
+    {
+      "name": "Testeyes3",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testeyes_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Models"
+    },
+    {
+      "name": "Testeyes4",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testeyes_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Models"
+    },
+    {
+      "name": "MaxStamina",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_stamina",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Stamina",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stamina",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "ChargeKey",
+      "type": "keybind",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "charge_key",
+      "path": "~/Keys/Keybinds"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "XP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "SP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PlayerName",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Overheat",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "LVL",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "joinworldfirsttime",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "IgnitionAbilityTHIRDtype",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "IgnitionAbilitySECONDtype",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "IgnitionAbilityINFERNALtype",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "IgnitionAbilityFOURTHtype",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "IgnitionAbilityDEMONINFERNALtype",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "heatabsorbed",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "HasAwakened",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Generation",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "FireSpeed",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "FireResistancedefense",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "FireResistance",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "FirePower",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "FireHealth",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "adollalburstevel",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Adollaburst",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "secondgenobsorb",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "FireResistanceMax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "joinworldfirsttimestamina",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "entity.fireforce.customhybrid_1": "Custom Hybrid Eyes",
+      "item.fireforce.arroweyes_spawn_egg": "Hybrid Eyes Spawn Egg",
+      "item.fireforce.shinraseyes_spawn_egg": "shinra Eyes Spawn Egg",
+      "item.fireforce.fire_force_emblem": "Fire Force Emblem",
+      "key.categories.fireforce": "Fire Force:Adolla",
+      "item.fireforce.hybrid_eyes_spawn_egg": "Hybrid Eyes Spawn Egg",
+      "item.fireforce.custom_hbrid_2_spawn_egg": "Custom Hybrid Eyes2 Spawn Egg",
+      "key.fireforce.adolla_burst_ability": "Ignition Ability 4",
+      "key.fireforce.charge_key": "Charge Key",
+      "key.fireforce.ignition_ability_1": "Ignition Ability 1",
+      "item.fireforce.customhybrid_1_spawn_egg": "Custom Hybrid Eyes Spawn Egg",
+      "entity.fireforce.custom_hbrid_2": "Custom Hybrid Eyes2",
+      "key.fireforce.ignition_ability_2": "Ignition Ability 2",
+      "key.fireforce.ignition_ability_3": "Ignition Ability 3",
+      "key.fireforce.ignition_ability_4": "Ignition Ability 4",
+      "advancements.fire_force_adolla.title": "Welcome to Fire Force Adolla",
+      "entity.fireforce.shinraseyes": "shinra Eyes",
+      "entity.fireforce.arroweyes": "Hybrid Eyes",
+      "key.fireforce.charcater_profile": "Charcater Profile",
+      "advancements.fire_force_adolla.descr": "Join the world of Fire Force",
+      "entity.fireforce.hybrid_eyes": "Hybrid Eyes"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Ignition Abilities",
+        "children": [
+          {
+            "name": "Infernal",
+            "children": []
+          },
+          {
+            "name": "Second Gen",
+            "children": []
+          },
+          {
+            "name": "Third Gen",
+            "children": []
+          },
+          {
+            "name": "Fourth Gen",
+            "children": []
+          },
+          {
+            "name": "Hybrid",
+            "children": []
+          },
+          {
+            "name": "Demon Infernal",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "GUI",
+        "children": [
+          {
+            "name": "GUI Procedures",
+            "children": []
+          },
+          {
+            "name": "Stats",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Keys",
+        "children": [
+          {
+            "name": "Keybinds",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Commands",
+        "children": [
+          {
+            "name": "Commands",
+            "children": [
+              {
+                "name": "Generation Set",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Command Procedures",
+            "children": [
+              {
+                "name": "Get Ignition Ability",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Level System",
+        "children": []
+      },
+      {
+        "name": "Advancements",
+        "children": [
+          {
+            "name": "Advancement Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "NPCs",
+        "children": []
+      },
+      {
+        "name": "Bosses",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": []
+      },
+      {
+        "name": "Models",
+        "children": [
+          {
+            "name": "Models Entitiys",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Items",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "fireforce",
+    "modName": "Fire Force:Adolla",
+    "version": "1.0.0",
+    "author": "Kemmia, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "kleidersplayerrenderer"
+    ],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.fireforce",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200234517
+}
