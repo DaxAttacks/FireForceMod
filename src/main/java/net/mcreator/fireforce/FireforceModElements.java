@@ -47,6 +47,10 @@ public class FireforceModElements {
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 
 	public FireforceModElements() {
+		sounds.put(new ResourceLocation("fireforce", "firearrowsound"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "firearrowsound")));
+		sounds.put(new ResourceLocation("fireforce", "adollalink"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "adollalink")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("fireforce").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

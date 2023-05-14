@@ -34,10 +34,6 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -71,6 +67,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -92,12 +100,24 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
         ]
       },
-      "path": "~/Ignition Abilities/Third Gen"
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow"
     },
     {
       "name": "IgnitionAbility1",
@@ -1141,7 +1161,7 @@
           }
         ]
       },
-      "path": "~/Ignition Abilities/Third Gen"
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
     },
     {
       "name": "FireArrowProjectile",
@@ -1150,7 +1170,7 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow_projectile",
-      "path": "~/Ignition Abilities/Third Gen"
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
     },
     {
       "name": "FireArrowParticles",
@@ -1167,7 +1187,7 @@
           }
         ]
       },
-      "path": "~/Ignition Abilities/Third Gen"
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
     },
     {
       "name": "FireArrowProjectileProjectileHitsPlayer",
@@ -1184,15 +1204,755 @@
           }
         ]
       },
-      "path": "~/Ignition Abilities/Third Gen"
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrorLevel0",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arror_level_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow"
+    },
+    {
+      "name": "FireArrowLevel1",
+      "type": "rangeditem",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_1",
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowLevel1Projectile",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_1_projectile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowLevel2Projectile",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_2_projectile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowLevel3Projectile",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_3_projectile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowLevel4Projectile",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_4_projectile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowLevel5Projectile",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_5_projectile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowAdollaBurstProjectile",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_adolla_burst_projectile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowLevel2Arrow",
+      "type": "rangeditem",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_2_arrow",
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowLevel3Arrow",
+      "type": "rangeditem",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_3_arrow",
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowLevel4Arrow",
+      "type": "rangeditem",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_4_arrow",
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowLevel5Arrow",
+      "type": "rangeditem",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_5_arrow",
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowAdollaArrow",
+      "type": "rangeditem",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_adolla_arrow",
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowLevel1P",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_1_p",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow"
+    },
+    {
+      "name": "FireArrowLevel2P",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_2_p",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow"
+    },
+    {
+      "name": "FireArrowLevel3P",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_3_p",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow"
+    },
+    {
+      "name": "FireArrowLevel4P",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_4_p",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow"
+    },
+    {
+      "name": "FireArrowLevel5P",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_level_5_p",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow"
+    },
+    {
+      "name": "FireArrowAdollaP",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_adolla_p",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow"
+    },
+    {
+      "name": "FirePowerXP",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_xp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FirePowerXP1",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_xp_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FirePowerXP2",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_xp_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FirePowerXP3",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_xp_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FirePowerXP4",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_xp_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FirePowerXP5",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_xp_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FireArrowPressofDeath",
+      "type": "rangeditem",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_pressof_death",
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowPressofDeathProjectile",
+      "type": "procedure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_pressof_death_projectile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "Pressofdeatharrow",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pressofdeatharrow",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "FireArrowPressofDeathP",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_pressof_death_p",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow"
+    },
+    {
+      "name": "Firepowerxp1foradollaburst",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firepowerxp_1foradollaburst",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FirePowerXPforAdolla1",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_x_pfor_adolla_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FirePowerXPforAdolla2",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_x_pfor_adolla_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FirePowerXPforAdolla4",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_x_pfor_adolla_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FirePowerXPforAdolla3",
+      "type": "procedure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_x_pfor_adolla_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "FirePowerXPforAdolla5",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_power_x_pfor_adolla_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "Dontgooverfirexpcap",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dontgooverfirexpcap",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "Dontgooverfirexp2",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dontgooverfirexp_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Level System"
+    },
+    {
+      "name": "Getfirexp",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "getfirexp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures"
     }
   ],
   "variable_elements": [
     {
+      "name": "xpmax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
       "name": "XP",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0.0"
+      "value": "5.0"
     },
     {
       "name": "SP",
@@ -1303,6 +2063,42 @@
       "value": "0"
     },
     {
+      "name": "firepowerxp5",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "firepowerxp4",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "firepowerxp3",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "firepowerxp2",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "firepowerxp1",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "firepowerxp0",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
       "name": "FirePower",
       "type": "number",
       "scope": "player_persistent",
@@ -1343,33 +2139,66 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "firearrowactive",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "firearrowsound",
+      "files": [
+        "new-project-_1_"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "adollalink",
+      "files": [
+        "adolla-link-sound-effect-fire-force-by-tuna.voicemod.net"
+      ],
+      "category": "player",
+      "subtitle": ""
+    }
+  ],
   "language_map": {
     "en_us": {
-      "entity.fireforce.customhybrid_1": "Custom Hybrid Eyes",
-      "item.fireforce.arroweyes_spawn_egg": "Hybrid Eyes Spawn Egg",
-      "item.fireforce.shinraseyes_spawn_egg": "shinra Eyes Spawn Egg",
-      "item.fireforce.fire_force_emblem": "Fire Force Emblem",
       "key.categories.fireforce": "Fire Force:Adolla",
+      "item.fireforce.fire_arrow_level_2_arrow": "Fire Arrow Projectile",
       "item.fireforce.hybrid_eyes_spawn_egg": "Hybrid Eyes Spawn Egg",
       "item.fireforce.custom_hbrid_2_spawn_egg": "Custom Hybrid Eyes2 Spawn Egg",
       "key.fireforce.adolla_burst_ability": "Ignition Ability 4",
+      "subtitles.adollalink": "",
+      "item.fireforce.fire_arrow_level_3_arrow": "Fire Arrow Projectile",
+      "advancements.fire_force_adolla.title": "Welcome to Fire Force Adolla",
+      "item.fireforce.fire_arrow_level_5_arrow": "Fire Arrow Projectile",
+      "advancements.fire_force_adolla.descr": "Join the world of Fire Force",
+      "item.fireforce.fire_arrow_projectile": "Fire Arrow Projectile",
+      "item.fireforce.fire_arrow_level_1": "Fire Arrow Projectile",
+      "entity.fireforce.hybrid_eyes": "Hybrid Eyes",
+      "entity.fireforce.customhybrid_1": "Custom Hybrid Eyes",
+      "item.fireforce.arroweyes_spawn_egg": "Hybrid Eyes Spawn Egg",
+      "item.fireforce.shinraseyes_spawn_egg": "shinra Eyes Spawn Egg",
+      "subtitles.firearrowsound": "",
+      "item.fireforce.fire_force_emblem": "Fire Force Emblem",
+      "item.fireforce.fire_arrow_adolla_arrow": "Fire Arrow Projectile",
+      "subtitles.firearrow": "",
       "key.fireforce.charge_key": "Charge Key",
+      "item.fireforce.fire_arrow_level_4_arrow": "Fire Arrow Projectile",
       "key.fireforce.ignition_ability_1": "Ignition Ability 1",
       "item.fireforce.customhybrid_1_spawn_egg": "Custom Hybrid Eyes Spawn Egg",
       "entity.fireforce.custom_hbrid_2": "Custom Hybrid Eyes2",
       "key.fireforce.ignition_ability_2": "Ignition Ability 2",
       "key.fireforce.ignition_ability_3": "Ignition Ability 3",
       "key.fireforce.ignition_ability_4": "Ignition Ability 4",
-      "advancements.fire_force_adolla.title": "Welcome to Fire Force Adolla",
       "entity.fireforce.shinraseyes": "shinra Eyes",
       "entity.fireforce.arroweyes": "Hybrid Eyes",
       "key.fireforce.charcater_profile": "Charcater Profile",
-      "advancements.fire_force_adolla.descr": "Join the world of Fire Force",
-      "item.fireforce.fire_arrow_projectile": "Fire Arrow Projectile",
-      "entity.fireforce.hybrid_eyes": "Hybrid Eyes"
+      "item.fireforce.fire_arrow_pressof_death": "Fire Arrow Projectile"
     }
   },
   "foldersRoot": {
@@ -1388,7 +2217,26 @@
           },
           {
             "name": "Third Gen",
-            "children": []
+            "children": [
+              {
+                "name": "Arrow",
+                "children": [
+                  {
+                    "name": "Fire Arrow",
+                    "children": [
+                      {
+                        "name": "FireArrowProjectiles",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Condensed Arrow",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "Fourth Gen",

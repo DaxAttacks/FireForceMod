@@ -11,7 +11,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.CommandSource;
 
-import net.mcreator.fireforce.procedures.GetDemonInfernalProcedure;
+import net.mcreator.fireforce.procedures.GetfirexpProcedure;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -36,7 +36,7 @@ public class GenerationsetDemonInfernalCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getHorizontalFacing();
 
-					GetDemonInfernalProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					GetfirexpProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 							(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 					return 0;
 				}));

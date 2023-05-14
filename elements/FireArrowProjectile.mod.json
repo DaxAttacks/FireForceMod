@@ -17,16 +17,16 @@
     "shootConstantly": false,
     "usageCount": 100,
     "actionSound": {
-      "value": ""
+      "value": "CUSTOM:firearrowsound"
     },
     "hasGlow": true,
     "animation": "none",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "bulletPower": 4.5,
-    "bulletDamage": 5.0,
-    "bulletKnockback": 5,
-    "bulletParticles": false,
+    "bulletPower": 3.9999999999999996,
+    "bulletDamage": 0.0,
+    "bulletKnockback": 0,
+    "bulletParticles": true,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
       "value": "Blocks.AIR"
@@ -34,6 +34,9 @@
     "bulletModel": "Default",
     "customBulletModelTexture": "",
     "onBulletHitsPlayer": {
+      "name": "FireArrowProjectileProjectileHitsPlayer"
+    },
+    "onBulletHitsEntity": {
       "name": "FireArrowProjectileProjectileHitsPlayer"
     },
     "onBulletFlyingTick": {

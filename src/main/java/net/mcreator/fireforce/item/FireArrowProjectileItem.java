@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Hand;
@@ -108,7 +109,7 @@ public class FireArrowProjectileItem extends FireforceModElements.ModElement {
 						}
 					}
 					if (entity.abilities.isCreativeMode || stack != ItemStack.EMPTY) {
-						ArrowCustomEntity entityarrow = shoot(world, entity, random, 4.5f, 5, 5);
+						ArrowCustomEntity entityarrow = shoot(world, entity, random, 3.9999999999999996f, 0, 0);
 						itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 						if (entity.abilities.isCreativeMode) {
 							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
@@ -187,6 +188,21 @@ public class FireArrowProjectileItem extends FireforceModElements.ModElement {
 		}
 
 		@Override
+		public void onEntityHit(EntityRayTraceResult entityRayTraceResult) {
+			super.onEntityHit(entityRayTraceResult);
+			Entity entity = entityRayTraceResult.getEntity();
+			Entity sourceentity = this.func_234616_v_();
+			Entity immediatesourceentity = this;
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			World world = this.world;
+
+			FireArrowProjectileProjectileHitsPlayerProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+
+		@Override
 		public void tick() {
 			super.tick();
 			double x = this.getPosX();
@@ -209,7 +225,7 @@ public class FireArrowProjectileItem extends FireforceModElements.ModElement {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 		entityarrow.shoot(entity.getLook(1).x, entity.getLook(1).y, entity.getLook(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
-		entityarrow.setIsCritical(false);
+		entityarrow.setIsCritical(true);
 		entityarrow.setDamage(damage);
 		entityarrow.setKnockbackStrength(knockback);
 		world.addEntity(entityarrow);
@@ -217,8 +233,8 @@ public class FireArrowProjectileItem extends FireforceModElements.ModElement {
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundCategory.PLAYERS, 1,
-				1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("fireforce:firearrowsound")),
+				SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
@@ -227,18 +243,18 @@ public class FireArrowProjectileItem extends FireforceModElements.ModElement {
 		double d0 = target.getPosY() + (double) target.getEyeHeight() - 1.1;
 		double d1 = target.getPosX() - entity.getPosX();
 		double d3 = target.getPosZ() - entity.getPosZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 4.5f * 2, 12.0F);
+		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 3.9999999999999996f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(5);
-		entityarrow.setKnockbackStrength(5);
-		entityarrow.setIsCritical(false);
+		entityarrow.setDamage(0);
+		entityarrow.setKnockbackStrength(0);
+		entityarrow.setIsCritical(true);
 		entity.world.addEntity(entityarrow);
 		double x = entity.getPosX();
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		entity.world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundCategory.PLAYERS, 1,
-				1f / (new Random().nextFloat() * 0.5f + 1));
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("fireforce:firearrowsound")),
+				SoundCategory.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

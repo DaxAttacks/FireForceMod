@@ -1,5 +1,7 @@
 package net.mcreator.fireforce.procedures;
 
+import net.minecraft.util.DamageSource;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireforce.FireforceMod;
@@ -15,6 +17,8 @@ public class FireArrowProjectileProjectileHitsPlayerProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		entity.setFire((int) 2);
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).attackEntityFrom(new DamageSource("Fire Arrow").setDamageBypassesArmor(), (float) 4);
+		}
 	}
 }

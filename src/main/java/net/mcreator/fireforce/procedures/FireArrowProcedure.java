@@ -1,18 +1,8 @@
 package net.mcreator.fireforce.procedures;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.entity.projectile.AbstractArrowEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.fireforce.item.FireArrowProjectileItem;
 import net.mcreator.fireforce.FireforceModVariables;
 import net.mcreator.fireforce.FireforceMod;
 
@@ -29,12 +19,30 @@ public class FireArrowProcedure {
 				FireforceMod.LOGGER.warn("Failed to load dependency world for procedure FireArrow!");
 			return;
 		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				FireforceMod.LOGGER.warn("Failed to load dependency x for procedure FireArrow!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				FireforceMod.LOGGER.warn("Failed to load dependency y for procedure FireArrow!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				FireforceMod.LOGGER.warn("Failed to load dependency z for procedure FireArrow!");
+			return;
+		}
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
 				FireforceMod.LOGGER.warn("Failed to load dependency entity for procedure FireArrow!");
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).IgnitionAbilityTHIRDtype == 1) {
@@ -47,172 +55,70 @@ public class FireArrowProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Cooldown Activated"), (true));
+				{
+					boolean _setval = (true);
+					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.firearrowactive = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
-				new Object() {
-					private int ticks = 0;
-					private float waitTicks;
-					private IWorld world;
-
-					public void start(IWorld world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
-						this.world = world;
-					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen >= 29) {
-							if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new FireforceModVariables.PlayerVariables())).FirePower <= 1) {
-								{
-									double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-											.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen - 29);
-									entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.FireOxygen = _setval;
-										capability.syncPlayerVariables(entity);
-									});
-								}
-								if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-									((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Fire Arrow"), (true));
-								}
-								new Object() {
-									private int ticks = 0;
-									private float waitTicks;
-									private IWorld world;
-
-									public void start(IWorld world, int waitTicks) {
-										this.waitTicks = waitTicks;
-										MinecraftForge.EVENT_BUS.register(this);
-										this.world = world;
-									}
-
-									@SubscribeEvent
-									public void tick(TickEvent.ServerTickEvent event) {
-										if (event.phase == TickEvent.Phase.END) {
-											this.ticks += 1;
-											if (this.ticks >= this.waitTicks)
-												run();
-										}
-									}
-
-									private void run() {
-
-										FireArrowParticlesProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
-												.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-										new Object() {
-											private int ticks = 0;
-											private float waitTicks;
-											private IWorld world;
-
-											public void start(IWorld world, int waitTicks) {
-												this.waitTicks = waitTicks;
-												MinecraftForge.EVENT_BUS.register(this);
-												this.world = world;
-											}
-
-											@SubscribeEvent
-											public void tick(TickEvent.ServerTickEvent event) {
-												if (event.phase == TickEvent.Phase.END) {
-													this.ticks += 1;
-													if (this.ticks >= this.waitTicks)
-														run();
-												}
-											}
-
-											private void run() {
-												{
-													Entity _shootFrom = entity;
-													World projectileLevel = _shootFrom.world;
-													if (!projectileLevel.isRemote()) {
-														ProjectileEntity _entityToSpawn = new Object() {
-															public ProjectileEntity getArrow(World world, float damage, int knockback,
-																	byte piercing) {
-																AbstractArrowEntity entityToSpawn = new FireArrowProjectileItem.ArrowCustomEntity(
-																		FireArrowProjectileItem.arrow, world);
-
-																entityToSpawn.setDamage(damage);
-																entityToSpawn.setKnockbackStrength(knockback);
-																entityToSpawn.setSilent(true);
-																entityToSpawn.setPierceLevel(piercing);
-																entityToSpawn.setFire(100);
-																entityToSpawn.setIsCritical(true);
-
-																return entityToSpawn;
-															}
-														}.getArrow(projectileLevel, 5, 2, (byte) 1);
-														_entityToSpawn.setPosition(_shootFrom.getPosX(), _shootFrom.getPosYEye() - 0.1,
-																_shootFrom.getPosZ());
-														_entityToSpawn.shoot(_shootFrom.getLookVec().x, _shootFrom.getLookVec().y,
-																_shootFrom.getLookVec().z, 4, 0);
-														projectileLevel.addEntity(_entityToSpawn);
-													}
-												}
-												{
-													double _setval = 1;
-													entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-															.ifPresent(capability -> {
-																capability.cooldown1 = _setval;
-																capability.syncPlayerVariables(entity);
-															});
-												}
-												new Object() {
-													private int ticks = 0;
-													private float waitTicks;
-													private IWorld world;
-
-													public void start(IWorld world, int waitTicks) {
-														this.waitTicks = waitTicks;
-														MinecraftForge.EVENT_BUS.register(this);
-														this.world = world;
-													}
-
-													@SubscribeEvent
-													public void tick(TickEvent.ServerTickEvent event) {
-														if (event.phase == TickEvent.Phase.END) {
-															this.ticks += 1;
-															if (this.ticks >= this.waitTicks)
-																run();
-														}
-													}
-
-													private void run() {
-														if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-															((PlayerEntity) entity)
-																	.sendStatusMessage(new StringTextComponent("Cooldown is deactivated"), (false));
-														}
-														{
-															double _setval = 0;
-															entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																	.ifPresent(capability -> {
-																		capability.cooldown1 = _setval;
-																		capability.syncPlayerVariables(entity);
-																	});
-														}
-														MinecraftForge.EVENT_BUS.unregister(this);
-													}
-												}.start(world, (int) 180);
-												MinecraftForge.EVENT_BUS.unregister(this);
-											}
-										}.start(world, (int) 5);
-										MinecraftForge.EVENT_BUS.unregister(this);
-									}
-								}.start(world, (int) 5);
-							}
-						}
-						MinecraftForge.EVENT_BUS.unregister(this);
-					}
-				}.start(world, (int) 5);
+				if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 0) {
+					FireArrorLevel0Procedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+									new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 1) {
+					FireArrowLevel1PProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+									new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 2) {
+					FireArrowLevel2PProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+									new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 3) {
+					FireArrowLevel3PProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+									new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 4) {
+					FireArrowLevel4PProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+									new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 5) {
+					FireArrowLevel5PProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+									new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 6) {
+					FireArrowAdollaPProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+									new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).pressofdeath == true) {
+					FireArrowPressofDeathPProcedure.executeProcedure(Stream
+							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
+									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
+									new AbstractMap.SimpleEntry<>("entity", entity))
+							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				}
 			}
 		}
 	}

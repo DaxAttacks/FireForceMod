@@ -1,0 +1,20 @@
+{
+  "firearrowsound": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fireforce:new-project-_1_",
+        "stream": false
+      }
+    ]
+  },
+  "adollalink": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fireforce:adolla-link-sound-effect-fire-force-by-tuna.voicemod.net",
+        "stream": false
+      }
+    ]
+  }
+}

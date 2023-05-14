@@ -87,7 +87,7 @@ public class XP3Procedure {
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).XP >= (entity
 						.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireforceModVariables.PlayerVariables())).LVL * 10 + 5) {
+						.orElse(new FireforceModVariables.PlayerVariables())).xpmax * 10 + 5) {
 			{
 				double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).LVL + 1);

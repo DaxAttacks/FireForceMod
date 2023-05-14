@@ -75,29 +75,23 @@ public class XPProcedure {
 				FireforceMod.LOGGER.warn("Failed to load dependency entity for procedure XP!");
 			return;
 		}
-		if (dependencies.get("sourceentity") == null) {
-			if (!dependencies.containsKey("sourceentity"))
-				FireforceMod.LOGGER.warn("Failed to load dependency sourceentity for procedure XP!");
-			return;
-		}
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		Entity entity = (Entity) dependencies.get("entity");
-		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		{
-			double _setval = ((sourceentity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+			double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new FireforceModVariables.PlayerVariables())).XP + 1);
-			sourceentity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+			entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.XP = _setval;
-				capability.syncPlayerVariables(sourceentity);
+				capability.syncPlayerVariables(entity);
 			});
 		}
-		if ((sourceentity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).XP >= (sourceentity
+		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireforceModVariables.PlayerVariables())).XP >= (entity
 						.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireforceModVariables.PlayerVariables())).LVL * 10 + 5) {
+						.orElse(new FireforceModVariables.PlayerVariables())).xpmax * 10 + 5) {
 			{
 				double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).LVL + 1);
@@ -114,17 +108,8 @@ public class XPProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (sourceentity instanceof PlayerEntity && !sourceentity.world.isRemote()) {
-				((PlayerEntity) sourceentity).sendStatusMessage(new StringTextComponent("You Leveled Up!"), (true));
-			}
-			if (world instanceof World && !world.isRemote()) {
-				((World) world).playSound(null, new BlockPos(x, y, z),
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.levelup")),
-						SoundCategory.PLAYERS, (float) 1, (float) 1);
-			} else {
-				((World) world).playSound(x, y, z,
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.levelup")),
-						SoundCategory.PLAYERS, (float) 1, (float) 1, false);
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You Leveled Up!"), (true));
 			}
 			{
 				double _setval = 0;
@@ -140,6 +125,15 @@ public class XPProcedure {
 					capability.XP = _setval;
 					capability.syncPlayerVariables(entity);
 				});
+			}
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).playSound(null, new BlockPos(x, y, z),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.levelup")),
+						SoundCategory.PLAYERS, (float) 1, (float) 1);
+			} else {
+				((World) world).playSound(x, y, z,
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.levelup")),
+						SoundCategory.PLAYERS, (float) 1, (float) 1, false);
 			}
 		}
 	}

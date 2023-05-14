@@ -71,6 +71,7 @@ public class FireforceModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
+			nbt.putDouble("xpmax", instance.xpmax);
 			nbt.putDouble("XP", instance.XP);
 			nbt.putDouble("SP", instance.SP);
 			nbt.putDouble("secondgenobsorb", instance.secondgenobsorb);
@@ -90,6 +91,12 @@ public class FireforceModVariables {
 			nbt.putDouble("Generation", instance.Generation);
 			nbt.putDouble("FireSpeed", instance.FireSpeed);
 			nbt.putDouble("FireResistancedefense", instance.FireResistancedefense);
+			nbt.putDouble("firepowerxp5", instance.firepowerxp5);
+			nbt.putDouble("firepowerxp4", instance.firepowerxp4);
+			nbt.putDouble("firepowerxp3", instance.firepowerxp3);
+			nbt.putDouble("firepowerxp2", instance.firepowerxp2);
+			nbt.putDouble("firepowerxp1", instance.firepowerxp1);
+			nbt.putDouble("firepowerxp0", instance.firepowerxp0);
 			nbt.putDouble("FirePower", instance.FirePower);
 			nbt.putDouble("FireOxygenMax", instance.FireOxygenMax);
 			nbt.putDouble("FireOxygen", instance.FireOxygen);
@@ -97,12 +104,14 @@ public class FireforceModVariables {
 			nbt.putDouble("cooldown1", instance.cooldown1);
 			nbt.putDouble("adollalburstevel", instance.adollalburstevel);
 			nbt.putBoolean("Adollaburst", instance.Adollaburst);
+			nbt.putBoolean("firearrowactive", instance.firearrowactive);
 			return nbt;
 		}
 
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
+			instance.xpmax = nbt.getDouble("xpmax");
 			instance.XP = nbt.getDouble("XP");
 			instance.SP = nbt.getDouble("SP");
 			instance.secondgenobsorb = nbt.getDouble("secondgenobsorb");
@@ -122,6 +131,12 @@ public class FireforceModVariables {
 			instance.Generation = nbt.getDouble("Generation");
 			instance.FireSpeed = nbt.getDouble("FireSpeed");
 			instance.FireResistancedefense = nbt.getDouble("FireResistancedefense");
+			instance.firepowerxp5 = nbt.getDouble("firepowerxp5");
+			instance.firepowerxp4 = nbt.getDouble("firepowerxp4");
+			instance.firepowerxp3 = nbt.getDouble("firepowerxp3");
+			instance.firepowerxp2 = nbt.getDouble("firepowerxp2");
+			instance.firepowerxp1 = nbt.getDouble("firepowerxp1");
+			instance.firepowerxp0 = nbt.getDouble("firepowerxp0");
 			instance.FirePower = nbt.getDouble("FirePower");
 			instance.FireOxygenMax = nbt.getDouble("FireOxygenMax");
 			instance.FireOxygen = nbt.getDouble("FireOxygen");
@@ -129,11 +144,13 @@ public class FireforceModVariables {
 			instance.cooldown1 = nbt.getDouble("cooldown1");
 			instance.adollalburstevel = nbt.getDouble("adollalburstevel");
 			instance.Adollaburst = nbt.getBoolean("Adollaburst");
+			instance.firearrowactive = nbt.getBoolean("firearrowactive");
 		}
 	}
 
 	public static class PlayerVariables {
-		public double XP = 0.0;
+		public double xpmax = 0;
+		public double XP = 5.0;
 		public double SP = 0;
 		public double secondgenobsorb = 0;
 		public boolean pressofdeath = false;
@@ -152,6 +169,12 @@ public class FireforceModVariables {
 		public double Generation = 0;
 		public double FireSpeed = 0;
 		public double FireResistancedefense = 0;
+		public double firepowerxp5 = 0;
+		public double firepowerxp4 = 0;
+		public double firepowerxp3 = 0;
+		public double firepowerxp2 = 0;
+		public double firepowerxp1 = 0;
+		public double firepowerxp0 = 0;
 		public double FirePower = 0;
 		public double FireOxygenMax = 0;
 		public double FireOxygen = 0.0;
@@ -159,6 +182,7 @@ public class FireforceModVariables {
 		public double cooldown1 = 0;
 		public double adollalburstevel = 0;
 		public boolean Adollaburst = false;
+		public boolean firearrowactive = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -193,6 +217,7 @@ public class FireforceModVariables {
 		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+		clone.xpmax = original.xpmax;
 		clone.XP = original.XP;
 		clone.SP = original.SP;
 		clone.pressofdeath = original.pressofdeath;
@@ -209,12 +234,19 @@ public class FireforceModVariables {
 		clone.Generation = original.Generation;
 		clone.FireSpeed = original.FireSpeed;
 		clone.FireResistancedefense = original.FireResistancedefense;
+		clone.firepowerxp5 = original.firepowerxp5;
+		clone.firepowerxp4 = original.firepowerxp4;
+		clone.firepowerxp3 = original.firepowerxp3;
+		clone.firepowerxp2 = original.firepowerxp2;
+		clone.firepowerxp1 = original.firepowerxp1;
+		clone.firepowerxp0 = original.firepowerxp0;
 		clone.FirePower = original.FirePower;
 		clone.FireOxygenMax = original.FireOxygenMax;
 		clone.FireOxygen = original.FireOxygen;
 		clone.FireHealth = original.FireHealth;
 		clone.adollalburstevel = original.adollalburstevel;
 		clone.Adollaburst = original.Adollaburst;
+		clone.firearrowactive = original.firearrowactive;
 		if (!event.isWasDeath()) {
 			clone.secondgenobsorb = original.secondgenobsorb;
 			clone.IgnitionAbilitySECONDtype = original.IgnitionAbilitySECONDtype;
@@ -245,6 +277,7 @@ public class FireforceModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
+					variables.xpmax = message.data.xpmax;
 					variables.XP = message.data.XP;
 					variables.SP = message.data.SP;
 					variables.secondgenobsorb = message.data.secondgenobsorb;
@@ -264,6 +297,12 @@ public class FireforceModVariables {
 					variables.Generation = message.data.Generation;
 					variables.FireSpeed = message.data.FireSpeed;
 					variables.FireResistancedefense = message.data.FireResistancedefense;
+					variables.firepowerxp5 = message.data.firepowerxp5;
+					variables.firepowerxp4 = message.data.firepowerxp4;
+					variables.firepowerxp3 = message.data.firepowerxp3;
+					variables.firepowerxp2 = message.data.firepowerxp2;
+					variables.firepowerxp1 = message.data.firepowerxp1;
+					variables.firepowerxp0 = message.data.firepowerxp0;
 					variables.FirePower = message.data.FirePower;
 					variables.FireOxygenMax = message.data.FireOxygenMax;
 					variables.FireOxygen = message.data.FireOxygen;
@@ -271,6 +310,7 @@ public class FireforceModVariables {
 					variables.cooldown1 = message.data.cooldown1;
 					variables.adollalburstevel = message.data.adollalburstevel;
 					variables.Adollaburst = message.data.Adollaburst;
+					variables.firearrowactive = message.data.firearrowactive;
 				}
 			});
 			context.setPacketHandled(true);
