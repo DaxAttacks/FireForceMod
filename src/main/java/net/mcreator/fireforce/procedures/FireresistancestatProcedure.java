@@ -19,12 +19,20 @@ public class FireresistancestatProcedure {
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).SP >= 1) {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireforceModVariables.PlayerVariables())).FireResistance <= 20) {
+					.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen <= 20) {
 				{
 					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).FireResistance + 1);
+							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen + 1);
 					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.FireResistance = _setval;
+						capability.FireOxygen = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygenMax + 100);
+					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.FireOxygenMax = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

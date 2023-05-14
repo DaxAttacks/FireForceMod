@@ -108,8 +108,8 @@ public class CharacterProfileStatsGuiWindow extends ContainerScreen<CharacterPro
 				.orElse(new FireforceModVariables.PlayerVariables())).LVL) + "", 239, 356, -16777216);
 		this.font.drawString(ms, "Speed: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).FireSpeed) + "", 216, 222, -16777216);
-		this.font.drawString(ms, "Heat Resistance: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireResistance) + "", 215, 247, -16777216);
+		this.font.drawString(ms, "Oxygen Level: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen) + "", 215, 247, -16777216);
 		this.font.drawString(ms, "Skill Points: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).SP) + "", 197, 183, -16777216);
 		this.font.drawString(ms, "", 218, 257, -16777216);
@@ -117,7 +117,7 @@ public class CharacterProfileStatsGuiWindow extends ContainerScreen<CharacterPro
 				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth) + "", 215, 198, -16777216);
 		this.font.drawString(ms, "Adolla Burst: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).adollalburstevel) + "", 217, 320, -16777216);
-		this.font.drawString(ms, "Fire Defense " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+		this.font.drawString(ms, "Heat Resistance: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).FireResistancedefense) + "", 214, 270, -16777216);
 		this.font.drawString(ms, "Fire Power: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).FirePower) + "", 215, 296, -16777216);

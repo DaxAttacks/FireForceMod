@@ -73,9 +73,12 @@ public class FireforceModVariables {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("XP", instance.XP);
 			nbt.putDouble("SP", instance.SP);
+			nbt.putDouble("secondgenobsorb", instance.secondgenobsorb);
+			nbt.putBoolean("pressofdeath", instance.pressofdeath);
 			nbt.putString("PlayerName", instance.PlayerName);
 			nbt.putDouble("Overheat", instance.Overheat);
 			nbt.putDouble("LVL", instance.LVL);
+			nbt.putBoolean("joinworldfirsttimestamina", instance.joinworldfirsttimestamina);
 			nbt.putBoolean("joinworldfirsttime", instance.joinworldfirsttime);
 			nbt.putDouble("IgnitionAbilityTHIRDtype", instance.IgnitionAbilityTHIRDtype);
 			nbt.putDouble("IgnitionAbilitySECONDtype", instance.IgnitionAbilitySECONDtype);
@@ -87,14 +90,13 @@ public class FireforceModVariables {
 			nbt.putDouble("Generation", instance.Generation);
 			nbt.putDouble("FireSpeed", instance.FireSpeed);
 			nbt.putDouble("FireResistancedefense", instance.FireResistancedefense);
-			nbt.putDouble("FireResistance", instance.FireResistance);
 			nbt.putDouble("FirePower", instance.FirePower);
+			nbt.putDouble("FireOxygenMax", instance.FireOxygenMax);
+			nbt.putDouble("FireOxygen", instance.FireOxygen);
 			nbt.putDouble("FireHealth", instance.FireHealth);
+			nbt.putDouble("cooldown1", instance.cooldown1);
 			nbt.putDouble("adollalburstevel", instance.adollalburstevel);
 			nbt.putBoolean("Adollaburst", instance.Adollaburst);
-			nbt.putDouble("secondgenobsorb", instance.secondgenobsorb);
-			nbt.putDouble("FireResistanceMax", instance.FireResistanceMax);
-			nbt.putBoolean("joinworldfirsttimestamina", instance.joinworldfirsttimestamina);
 			return nbt;
 		}
 
@@ -103,9 +105,12 @@ public class FireforceModVariables {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.XP = nbt.getDouble("XP");
 			instance.SP = nbt.getDouble("SP");
+			instance.secondgenobsorb = nbt.getDouble("secondgenobsorb");
+			instance.pressofdeath = nbt.getBoolean("pressofdeath");
 			instance.PlayerName = nbt.getString("PlayerName");
 			instance.Overheat = nbt.getDouble("Overheat");
 			instance.LVL = nbt.getDouble("LVL");
+			instance.joinworldfirsttimestamina = nbt.getBoolean("joinworldfirsttimestamina");
 			instance.joinworldfirsttime = nbt.getBoolean("joinworldfirsttime");
 			instance.IgnitionAbilityTHIRDtype = nbt.getDouble("IgnitionAbilityTHIRDtype");
 			instance.IgnitionAbilitySECONDtype = nbt.getDouble("IgnitionAbilitySECONDtype");
@@ -117,23 +122,25 @@ public class FireforceModVariables {
 			instance.Generation = nbt.getDouble("Generation");
 			instance.FireSpeed = nbt.getDouble("FireSpeed");
 			instance.FireResistancedefense = nbt.getDouble("FireResistancedefense");
-			instance.FireResistance = nbt.getDouble("FireResistance");
 			instance.FirePower = nbt.getDouble("FirePower");
+			instance.FireOxygenMax = nbt.getDouble("FireOxygenMax");
+			instance.FireOxygen = nbt.getDouble("FireOxygen");
 			instance.FireHealth = nbt.getDouble("FireHealth");
+			instance.cooldown1 = nbt.getDouble("cooldown1");
 			instance.adollalburstevel = nbt.getDouble("adollalburstevel");
 			instance.Adollaburst = nbt.getBoolean("Adollaburst");
-			instance.secondgenobsorb = nbt.getDouble("secondgenobsorb");
-			instance.FireResistanceMax = nbt.getDouble("FireResistanceMax");
-			instance.joinworldfirsttimestamina = nbt.getBoolean("joinworldfirsttimestamina");
 		}
 	}
 
 	public static class PlayerVariables {
 		public double XP = 0.0;
 		public double SP = 0;
+		public double secondgenobsorb = 0;
+		public boolean pressofdeath = false;
 		public String PlayerName = "";
 		public double Overheat = 0;
 		public double LVL = 0;
+		public boolean joinworldfirsttimestamina = false;
 		public boolean joinworldfirsttime = false;
 		public double IgnitionAbilityTHIRDtype = 0;
 		public double IgnitionAbilitySECONDtype = 0;
@@ -145,14 +152,13 @@ public class FireforceModVariables {
 		public double Generation = 0;
 		public double FireSpeed = 0;
 		public double FireResistancedefense = 0;
-		public double FireResistance = 0.0;
 		public double FirePower = 0;
+		public double FireOxygenMax = 0;
+		public double FireOxygen = 0.0;
 		public double FireHealth = 0;
+		public double cooldown1 = 0;
 		public double adollalburstevel = 0;
 		public boolean Adollaburst = false;
-		public double secondgenobsorb = 0;
-		public double FireResistanceMax = 0;
-		public boolean joinworldfirsttimestamina = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -189,9 +195,11 @@ public class FireforceModVariables {
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.XP = original.XP;
 		clone.SP = original.SP;
+		clone.pressofdeath = original.pressofdeath;
 		clone.PlayerName = original.PlayerName;
 		clone.Overheat = original.Overheat;
 		clone.LVL = original.LVL;
+		clone.joinworldfirsttimestamina = original.joinworldfirsttimestamina;
 		clone.joinworldfirsttime = original.joinworldfirsttime;
 		clone.IgnitionAbilityTHIRDtype = original.IgnitionAbilityTHIRDtype;
 		clone.IgnitionAbilityINFERNALtype = original.IgnitionAbilityINFERNALtype;
@@ -201,17 +209,17 @@ public class FireforceModVariables {
 		clone.Generation = original.Generation;
 		clone.FireSpeed = original.FireSpeed;
 		clone.FireResistancedefense = original.FireResistancedefense;
-		clone.FireResistance = original.FireResistance;
 		clone.FirePower = original.FirePower;
+		clone.FireOxygenMax = original.FireOxygenMax;
+		clone.FireOxygen = original.FireOxygen;
 		clone.FireHealth = original.FireHealth;
+		clone.adollalburstevel = original.adollalburstevel;
 		clone.Adollaburst = original.Adollaburst;
-		clone.FireResistanceMax = original.FireResistanceMax;
-		clone.joinworldfirsttimestamina = original.joinworldfirsttimestamina;
 		if (!event.isWasDeath()) {
+			clone.secondgenobsorb = original.secondgenobsorb;
 			clone.IgnitionAbilitySECONDtype = original.IgnitionAbilitySECONDtype;
 			clone.heatabsorbed = original.heatabsorbed;
-			clone.adollalburstevel = original.adollalburstevel;
-			clone.secondgenobsorb = original.secondgenobsorb;
+			clone.cooldown1 = original.cooldown1;
 		}
 	}
 
@@ -239,9 +247,12 @@ public class FireforceModVariables {
 							.orElse(new PlayerVariables()));
 					variables.XP = message.data.XP;
 					variables.SP = message.data.SP;
+					variables.secondgenobsorb = message.data.secondgenobsorb;
+					variables.pressofdeath = message.data.pressofdeath;
 					variables.PlayerName = message.data.PlayerName;
 					variables.Overheat = message.data.Overheat;
 					variables.LVL = message.data.LVL;
+					variables.joinworldfirsttimestamina = message.data.joinworldfirsttimestamina;
 					variables.joinworldfirsttime = message.data.joinworldfirsttime;
 					variables.IgnitionAbilityTHIRDtype = message.data.IgnitionAbilityTHIRDtype;
 					variables.IgnitionAbilitySECONDtype = message.data.IgnitionAbilitySECONDtype;
@@ -253,14 +264,13 @@ public class FireforceModVariables {
 					variables.Generation = message.data.Generation;
 					variables.FireSpeed = message.data.FireSpeed;
 					variables.FireResistancedefense = message.data.FireResistancedefense;
-					variables.FireResistance = message.data.FireResistance;
 					variables.FirePower = message.data.FirePower;
+					variables.FireOxygenMax = message.data.FireOxygenMax;
+					variables.FireOxygen = message.data.FireOxygen;
 					variables.FireHealth = message.data.FireHealth;
+					variables.cooldown1 = message.data.cooldown1;
 					variables.adollalburstevel = message.data.adollalburstevel;
 					variables.Adollaburst = message.data.Adollaburst;
-					variables.secondgenobsorb = message.data.secondgenobsorb;
-					variables.FireResistanceMax = message.data.FireResistanceMax;
-					variables.joinworldfirsttimestamina = message.data.joinworldfirsttimestamina;
 				}
 			});
 			context.setPacketHandled(true);

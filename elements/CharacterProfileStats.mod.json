@@ -186,12 +186,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Heat Resistance: <VAR:integer:FireResistance>",
+          "text": "Oxygen Level: <VAR:integer:FireOxygen>",
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "name": "Heat Resistance: <VAR:integer:FireResistance>",
+          "name": "Oxygen Level: <VAR:integer:FireOxygen>",
           "x": 179,
           "y": 117
         }
@@ -279,12 +279,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Fire Defense <VAR:integer:FireResistancedefense>",
+          "text": "Heat Resistance: <VAR:integer:FireResistancedefense>",
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "name": "Fire Defense <VAR:integer:FireResistancedefense>",
+          "name": "Heat Resistance: <VAR:integer:FireResistancedefense>",
           "x": 178,
           "y": 140
         }

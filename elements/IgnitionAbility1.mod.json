@@ -4,6 +4,9 @@
   "definition": {
     "triggerKey": "Z",
     "keyBindingName": "Ignition Ability 1",
-    "keyBindingCategoryKey": "misc"
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "Test"
+    }
   }
 }

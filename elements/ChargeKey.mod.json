@@ -7,9 +7,6 @@
     "keyBindingCategoryKey": "misc",
     "onKeyPressed": {
       "name": "Stamina"
-    },
-    "onKeyReleased": {
-      "name": "Stamina"
     }
   }
 }

@@ -65,7 +65,16 @@
       "locked_code": false,
       "registry_name": "test",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Keys"
     },
@@ -77,7 +86,16 @@
       "locked_code": false,
       "registry_name": "fire_arrow",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Ignition Abilities/Third Gen"
     },
@@ -86,7 +104,7 @@
       "type": "keybind",
       "sortid": 6,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ignition_ability_1",
       "path": "~/Keys/Keybinds"
     },
@@ -125,7 +143,16 @@
       "locked_code": false,
       "registry_name": "testz",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Keys"
     },
@@ -1055,17 +1082,109 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Level System"
+      }
+    },
+    {
+      "name": "Testoverlay",
+      "type": "overlay",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testoverlay"
     },
     {
       "name": "ChargeKey",
       "type": "keybind",
-      "sortid": 71,
+      "sortid": 73,
       "compiles": true,
       "locked_code": true,
       "registry_name": "charge_key",
       "path": "~/Keys/Keybinds"
+    },
+    {
+      "name": "ShinraAdolla",
+      "type": "particle",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shinra_adolla",
+      "path": "~/Particles"
+    },
+    {
+      "name": "FireArrowProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen"
+    },
+    {
+      "name": "FireArrowProjectile",
+      "type": "rangeditem",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_projectile",
+      "path": "~/Ignition Abilities/Third Gen"
+    },
+    {
+      "name": "FireArrowParticles",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_particles",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen"
+    },
+    {
+      "name": "FireArrowProjectileProjectileHitsPlayer",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_projectile_projectile_hits_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen"
     }
   ],
   "variable_elements": [
@@ -1080,6 +1199,18 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "secondgenobsorb",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "pressofdeath",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     },
     {
       "name": "PlayerName",
@@ -1098,6 +1229,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "joinworldfirsttimestamina",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     },
     {
       "name": "joinworldfirsttime",
@@ -1166,16 +1303,22 @@
       "value": "0"
     },
     {
-      "name": "FireResistance",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0.0"
-    },
-    {
       "name": "FirePower",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "FireOxygenMax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "FireOxygen",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
     },
     {
       "name": "FireHealth",
@@ -1184,31 +1327,19 @@
       "value": "0"
     },
     {
-      "name": "adollalburstevel",
+      "name": "cooldown1",
       "type": "number",
       "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "adollalburstevel",
+      "type": "number",
+      "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "Adollaburst",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "secondgenobsorb",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
-      "name": "FireResistanceMax",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "joinworldfirsttimestamina",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -1237,6 +1368,7 @@
       "entity.fireforce.arroweyes": "Hybrid Eyes",
       "key.fireforce.charcater_profile": "Charcater Profile",
       "advancements.fire_force_adolla.descr": "Join the world of Fire Force",
+      "item.fireforce.fire_arrow_projectile": "Fire Arrow Projectile",
       "entity.fireforce.hybrid_eyes": "Hybrid Eyes"
     }
   },
@@ -1353,6 +1485,10 @@
       },
       {
         "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Particles",
         "children": []
       }
     ]
