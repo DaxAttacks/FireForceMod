@@ -19,7 +19,7 @@ public class FireSpeedstatsProcedure {
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).SP >= 1) {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireforceModVariables.PlayerVariables())).FireSpeed <= 5) {
+					.orElse(new FireforceModVariables.PlayerVariables())).FireSpeed < 5) {
 				{
 					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new FireforceModVariables.PlayerVariables())).FireSpeed + 1);

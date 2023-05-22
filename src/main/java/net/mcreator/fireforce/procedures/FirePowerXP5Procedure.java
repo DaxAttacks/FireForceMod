@@ -46,7 +46,7 @@ public class FirePowerXP5Procedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).firepowerxp5 >= 2) {
+				.orElse(new FireforceModVariables.PlayerVariables())).firepowerxp5 >= 600) {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new FireforceModVariables.PlayerVariables())).Adollaburst == true) {
 				{

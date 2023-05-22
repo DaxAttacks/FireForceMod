@@ -46,7 +46,7 @@ public class FirePowerXP1Procedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).firepowerxp1 == 2) {
+				.orElse(new FireforceModVariables.PlayerVariables())).firepowerxp1 == 250) {
 			{
 				double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).FirePower + 1);

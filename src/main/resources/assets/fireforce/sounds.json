@@ -1,18 +1,36 @@
 {
-  "firearrowsound": {
-    "category": "player",
-    "sounds": [
-      {
-        "name": "fireforce:new-project-_1_",
-        "stream": false
-      }
-    ]
-  },
   "adollalink": {
     "category": "player",
     "sounds": [
       {
         "name": "fireforce:adolla-link-sound-effect-fire-force-by-tuna.voicemod.net",
+        "stream": false
+      }
+    ]
+  },
+  "firewindsound": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fireforce:untitled-video-made-with-clipchamp",
+        "stream": false
+      }
+    ]
+  },
+  "novaexpelsound": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fireforce:untitled-video-made-with-clipchamp-_1_",
+        "stream": false
+      }
+    ]
+  },
+  "firewind": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "fireforce:untitled-video-made-with-clipchamp-_2_",
         "stream": false
       }
     ]

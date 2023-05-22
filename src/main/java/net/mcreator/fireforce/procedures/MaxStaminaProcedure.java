@@ -53,7 +53,7 @@ public class MaxStaminaProcedure {
 				});
 			}
 			{
-				double _setval = 200;
+				double _setval = 100;
 				entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FireOxygenMax = _setval;
 					capability.syncPlayerVariables(entity);

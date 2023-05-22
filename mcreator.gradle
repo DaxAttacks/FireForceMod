@@ -8,3 +8,54 @@ dependencies {
   implementation fg.deobf("curse.maven:kleidersplayerrenderer-682065:4478424")
 }
 
+def extraModsDir = 'extra-mods-1.16.5'
+task addnewfoldersmods(type: DefaultTask){
+  ant.mkdir(dir: 'extra-mods-1.16.5/');
+}
+repositories {
+  flatDir {
+  name "extra-mods" 
+  dir file(extraModsDir)
+  }
+}
+
+dependencies 
+{
+  for (extraModJar in fileTree(dir: extraModsDir, include: '*.jar')) {
+  def basename = extraModJar.name.substring(0, extraModJar.name.length() - ".jar".length()) 
+  def versionSep = basename.lastIndexOf('-') 
+  assert versionSep != -1 
+  def artifactId = basename.substring(0, versionSep) 
+  def version = basename.substring(versionSep + 1)
+  runtimeOnly fg.deobf("extra-mods:$artifactId:$version")}
+}
+minecraft {
+ mappings channel: 'snapshot', version: '20201028-1.16.3'
+ runs {
+  client {
+      workingDirectory project.file('run')
+      property 'forge.logging.markers', 'REGISTRIES'
+      property 'forge.logging.console.level', 'debug'
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+      mods {
+          examplemod {
+              source sourceSets.main
+          }
+      }
+  }
+  server {
+      workingDirectory project.file('run')
+      property 'forge.logging.markers', 'REGISTRIES'
+      property 'forge.logging.console.level', 'debug'
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+      mods {
+          examplemod {
+              source sourceSets.main
+          }
+      }
+        }
+      }
+          }
+

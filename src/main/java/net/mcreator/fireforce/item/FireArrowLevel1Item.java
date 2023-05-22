@@ -197,8 +197,7 @@ public class FireArrowLevel1Item extends FireforceModElements.ModElement {
 			Entity immediatesourceentity = this;
 
 			FireArrowProjectileWhileProjectileFlyingTickProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("immediatesourceentity", immediatesourceentity))
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("immediatesourceentity", immediatesourceentity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			if (this.inGround)
 				this.remove();
@@ -209,7 +208,7 @@ public class FireArrowLevel1Item extends FireforceModElements.ModElement {
 		ArrowCustomEntity entityarrow = new ArrowCustomEntity(arrow, entity, world);
 		entityarrow.shoot(entity.getLook(1).x, entity.getLook(1).y, entity.getLook(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
-		entityarrow.setIsCritical(true);
+		entityarrow.setIsCritical(false);
 		entityarrow.setDamage(damage);
 		entityarrow.setKnockbackStrength(knockback);
 		world.addEntity(entityarrow);
@@ -217,8 +216,8 @@ public class FireArrowLevel1Item extends FireforceModElements.ModElement {
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("fireforce:firearrowsound")),
-				SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundCategory.PLAYERS, 1,
+				1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
@@ -231,14 +230,14 @@ public class FireArrowLevel1Item extends FireforceModElements.ModElement {
 		entityarrow.setSilent(true);
 		entityarrow.setDamage(0);
 		entityarrow.setKnockbackStrength(0);
-		entityarrow.setIsCritical(true);
+		entityarrow.setIsCritical(false);
 		entity.world.addEntity(entityarrow);
 		double x = entity.getPosX();
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		entity.world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("fireforce:firearrowsound")),
-				SoundCategory.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("")), SoundCategory.PLAYERS, 1,
+				1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

@@ -60,7 +60,7 @@ public class Testeyes2Procedure {
 					//  _evt.setCanceled(true); 
 				}
 				new com.kleiders.kleidersplayerrenderer.InternalPlayerRenderer(_evt.getRenderer().getRenderManager(),
-						new ResourceLocation("fireforce:textures/entities/arroweyes3.png")).render((AbstractClientPlayerEntity) _evt.getEntity(),
+						new ResourceLocation("fireforce:textures/entities/daxeyes.png")).render((AbstractClientPlayerEntity) _evt.getEntity(),
 								_evt.getEntity().rotationYaw, _evt.getPartialRenderTick(), _evt.getMatrixStack(), _evt.getBuffers(), _evt.getLight());
 			}
 		}

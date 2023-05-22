@@ -1,0 +1,177 @@
+{
+  "_fv": 33,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGHEST",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "oxygen100percent.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "OxygenMax"
+          },
+          "name": "oxygen100percent.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "oxygen80percent.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Oxygen80percent"
+          },
+          "name": "oxygen80percent.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "oxygen60percent.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Oxygen60percent"
+          },
+          "name": "oxygen60percent.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "oxygen40percent.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Oxygen40percent"
+          },
+          "name": "oxygen40percent.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "oxygen20percent.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Oxygen20percent"
+          },
+          "name": "oxygen20percent.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "oxygen0.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Oxygen0"
+          },
+          "name": "oxygen0.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "overheat20percent.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Overheat1"
+          },
+          "name": "overheat20percent.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "overheat40percent.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Overheat2"
+          },
+          "name": "overheat40percent.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "overheat60percent.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Overheat3"
+          },
+          "name": "overheat60percent.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "overheat80percent.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Overheat4"
+          },
+          "name": "overheat80percent.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "overheat100percent.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Overheat5"
+          },
+          "name": "overheat100percent.png",
+          "x": -30,
+          "y": 161
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:integer:tickspassed>",
+          "color": {
+            "value": -52429,
+            "falpha": 0.0
+          },
+          "name": "<VAR:integer:tickspassed>",
+          "x": 294,
+          "y": 53
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "Genhigherthan1"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

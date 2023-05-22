@@ -16,8 +16,21 @@
             "name": "Gen3"
           },
           "name": "<VAR:integer:FireOxygen>",
-          "x": 28,
-          "y": 213
+          "x": 311,
+          "y": 225
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:FireOverheatlevel>",
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "name": "<VAR:FireOverheatlevel>",
+          "x": 299,
+          "y": 149
         }
       }
     ],

@@ -271,6 +271,9 @@
             "value": -16777216,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "Ifadolla"
+          },
           "name": "Adolla Burst: <VAR:integer:adollalburstevel>",
           "x": 181,
           "y": 190
@@ -296,6 +299,9 @@
           "onClick": {
             "name": "Adollastat"
           },
+          "displayCondition": {
+            "name": "Ifadolla"
+          },
           "width": 30,
           "height": 20,
           "name": "+",
@@ -315,33 +321,6 @@
           "name": "<",
           "x": 136,
           "y": 216
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "+",
-          "onClick": {
-            "name": "Firepowerstat"
-          },
-          "width": 30,
-          "height": 20,
-          "name": "+",
-          "x": 147,
-          "y": 160
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "Fire Power: <VAR:integer:FirePower>",
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "name": "Fire Power: <VAR:integer:FirePower>",
-          "x": 179,
-          "y": 166
         }
       }
     ],

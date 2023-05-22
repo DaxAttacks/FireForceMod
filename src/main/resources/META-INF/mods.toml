@@ -25,4 +25,10 @@ authors="Kemmia, MCreator"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.fireforce]]
+    modId="allmods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

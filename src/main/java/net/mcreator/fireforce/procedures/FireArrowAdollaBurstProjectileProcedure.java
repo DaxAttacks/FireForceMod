@@ -18,7 +18,7 @@ public class FireArrowAdollaBurstProjectileProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).attackEntityFrom(new DamageSource("Fire Arrow").setDamageBypassesArmor(), (float) 11);
+			((LivingEntity) entity).attackEntityFrom(new DamageSource("Fire Arrow").setDamageBypassesArmor(), (float) 12);
 		}
 	}
 }

@@ -32,59 +32,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Level System"
-    },
-    {
-      "name": "Test",
-      "type": "procedure",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Keys"
     },
     {
       "name": "FireArrow",
@@ -133,7 +84,7 @@
       "type": "keybind",
       "sortid": 7,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "ignition_ability_2",
       "path": "~/Keys/Keybinds"
     },
@@ -154,27 +105,6 @@
       "locked_code": true,
       "registry_name": "ignition_ability_4",
       "path": "~/Keys/Keybinds"
-    },
-    {
-      "name": "Testz",
-      "type": "procedure",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "testz",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Keys"
     },
     {
       "name": "Generationset3",
@@ -512,200 +442,10 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
       "path": "~/Level System"
-    },
-    {
-      "name": "XP3",
-      "type": "procedure",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xp_3",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Level System"
-    },
-    {
-      "name": "XP4",
-      "type": "procedure",
-      "sortid": 38,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xp_4",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Level System"
-    },
-    {
-      "name": "XP5",
-      "type": "procedure",
-      "sortid": 39,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xp_5",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Level System"
-    },
-    {
-      "name": "XP6",
-      "type": "procedure",
-      "sortid": 40,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xp_6",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Level System"
-    },
-    {
-      "name": "XP7",
-      "type": "procedure",
-      "sortid": 41,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xp_7",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Level System"
-    },
-    {
-      "name": "HybridEyes",
-      "type": "livingentity",
-      "sortid": 43,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hybrid_eyes",
-      "path": "~/Models/Models Entitiys"
     },
     {
       "name": "HybridEye",
@@ -758,33 +498,6 @@
         ]
       },
       "path": "~/Advancements/Advancement Procedures"
-    },
-    {
-      "name": "Customhybrid1",
-      "type": "livingentity",
-      "sortid": 48,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "customhybrid_1",
-      "path": "~/Models/Models Entitiys"
-    },
-    {
-      "name": "CustomHbrid2",
-      "type": "livingentity",
-      "sortid": 49,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "custom_hbrid_2",
-      "path": "~/Models/Models Entitiys"
-    },
-    {
-      "name": "Arroweyes",
-      "type": "livingentity",
-      "sortid": 50,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "arroweyes",
-      "path": "~/Models/Models Entitiys"
     },
     {
       "name": "Arroweye",
@@ -843,15 +556,6 @@
       "path": "~/GUI"
     },
     {
-      "name": "Shinraseyes",
-      "type": "livingentity",
-      "sortid": 55,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shinraseyes",
-      "path": "~/Models/Models Entitiys"
-    },
-    {
       "name": "Characterprofilestatsopen",
       "type": "procedure",
       "sortid": 56,
@@ -891,23 +595,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "health_stat",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Stats"
-    },
-    {
-      "name": "Firepowerstat",
-      "type": "procedure",
-      "sortid": 59,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "firepowerstat",
       "metadata": {
         "dependencies": [
           {
@@ -1144,18 +831,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -1218,18 +893,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -1409,18 +1072,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -1440,18 +1091,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -1475,18 +1114,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -1508,18 +1135,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -1539,51 +1154,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow"
-    },
-    {
-      "name": "FireArrowAdollaP",
-      "type": "procedure",
-      "sortid": 97,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fire_arrow_adolla_p",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -1731,24 +1301,12 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "immediatesourceentity",
+            "name": "entity",
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
+            "name": "immediatesourceentity",
+            "type": "entity"
           }
         ]
       },
@@ -1766,18 +1324,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -1939,56 +1485,1811 @@
         ]
       },
       "path": "~/Commands/Command Procedures"
+    },
+    {
+      "name": "Firearrowprojectileadollapressofdeath",
+      "type": "rangeditem",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firearrowprojectileadollapressofdeath",
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "Firearrowpodplusadolla",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firearrowpodplusadolla",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Arrow/Fire Arrow/FireArrowProjectiles"
+    },
+    {
+      "name": "Customplayereyesfoily",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customplayereyesfoily",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Models"
+    },
+    {
+      "name": "CustomplayereyesOzmenosXarmenos",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customplayereyes_ozmenos_xarmenos",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Models"
+    },
+    {
+      "name": "Customeyes",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customeyes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures"
+    },
+    {
+      "name": "Customeyesdeactive",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customeyesdeactive",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures"
+    },
+    {
+      "name": "Customeyesactive",
+      "type": "command",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customeyesactive",
+      "path": "~/Commands/Commands/Custom Eyes"
+    },
+    {
+      "name": "Customeyesdeactivate",
+      "type": "command",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "customeyesdeactivate",
+      "path": "~/Commands/Commands/Custom Eyes"
+    },
+    {
+      "name": "OxygenMax",
+      "type": "procedure",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygen_max",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oxygen80percent",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygen_80percent",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oxygen60percent",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygen_60percent",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oxygen40percent",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygen_40percent",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oxygen20percent",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygen_20percent",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oxygen0",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygen_0",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Overheat1",
+      "type": "procedure",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overheat_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Overheat2",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overheat_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Overheat3",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overheat_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Overheat4",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overheat_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Overheat5",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overheat_5",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OxygenBar",
+      "type": "overlay",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygen_bar"
+    },
+    {
+      "name": "Genhigherthan1",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "genhigherthan_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Oxygen0part2",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oxygen_0part_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Overheatpart2",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overheatpart_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tephrosis",
+      "type": "potioneffect",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tephrosis",
+      "path": "~/Effects"
+    },
+    {
+      "name": "Rejoinworld",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rejoinworld",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rejoin2",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rejoin_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoltageNova",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltage_nova",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages/VN"
+    },
+    {
+      "name": "VoltageNova0",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltage_nova_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages/VN"
+    },
+    {
+      "name": "VoltagenovaPlayerTick",
+      "type": "procedure",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltagenova_player_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages/VN"
+    },
+    {
+      "name": "Voltagenovaparticles",
+      "type": "procedure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltagenovaparticles",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages"
+    },
+    {
+      "name": "VoltageNova1",
+      "type": "procedure",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltage_nova_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages"
+    },
+    {
+      "name": "GetVoltageNova",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_voltage_nova",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commands/Command Procedures/Get Ignition Ability"
+    },
+    {
+      "name": "IAsetVoltageNova",
+      "type": "command",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "i_aset_voltage_nova",
+      "path": "~/Commands/Commands"
+    },
+    {
+      "name": "KeyZ",
+      "type": "procedure",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "key_z",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keys"
+    },
+    {
+      "name": "VoltageNova0ff",
+      "type": "procedure",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltage_nova_0ff",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages"
+    },
+    {
+      "name": "KeyX",
+      "type": "procedure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "key_x",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keys"
+    },
+    {
+      "name": "Tickspassed",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tickspassed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tickspassed2",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tickspassed_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ifadolla",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ifadolla",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Stats"
+    },
+    {
+      "name": "Speed",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Stats"
+    },
+    {
+      "name": "Health",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Stats"
+    },
+    {
+      "name": "Tickspassed3",
+      "type": "procedure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tickspassed_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tickspassed4",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tickspassed_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoltagaNovaExpel",
+      "type": "rangeditem",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltaga_nova_expel",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "VoltagaNovaExpelWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltaga_nova_expel_while_projectile_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles"
+    },
+    {
+      "name": "NovaExpel",
+      "type": "procedure",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova"
+    },
+    {
+      "name": "Novaexpel0",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "novaexpel_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova"
+    },
+    {
+      "name": "NovaExpellevel0projectile",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expellevel_0projectile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NovaExpelstage2",
+      "type": "rangeditem",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expelstage_2",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NE2",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ne_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NE3",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ne_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NE4",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ne_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NE5",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ne_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NE3Entity",
+      "type": "rangeditem",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ne_3_entity",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NEpaticles2",
+      "type": "procedure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "n_epaticles_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NE3particles3",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ne_3particles_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NEparticles4",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "n_eparticles_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NEparticles5",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "n_eparticles_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NE4Entity",
+      "type": "rangeditem",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ne_4_entity",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "NE5Entity",
+      "type": "rangeditem",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ne_5_entity",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level 0"
+    },
+    {
+      "name": "Voltagenovasound",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltagenovasound",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages"
+    },
+    {
+      "name": "Voltagenovascaleup",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltagenovascaleup",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages"
+    },
+    {
+      "name": "Tickspassed5",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tickspassed_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tickspassed6",
+      "type": "procedure",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tickspassed_6",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Voltagenovasound2",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltagenovasound_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages"
+    },
+    {
+      "name": "Voltagenovaplayerticks2",
+      "type": "procedure",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltagenovaplayerticks_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages/VN"
+    },
+    {
+      "name": "Voltagenovaplayerticks3",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltagenovaplayerticks_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages/VN"
+    },
+    {
+      "name": "Voltagenovaplayerticks4",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltagenovaplayerticks_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages/VN"
+    },
+    {
+      "name": "Voltagenovaplayerticks5",
+      "type": "procedure",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltagenovaplayerticks_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages/VN"
+    },
+    {
+      "name": "Voltagenovaplayertickspressofdeath",
+      "type": "procedure",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltagenovaplayertickspressofdeath",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages/VN"
+    },
+    {
+      "name": "Novaexpel1",
+      "type": "procedure",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "novaexpel_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova"
+    },
+    {
+      "name": "Novaexpellevel1projectile",
+      "type": "procedure",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "novaexpellevel_1projectile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NEL1P",
+      "type": "procedure",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_1_p",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NEL1P2",
+      "type": "procedure",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_1_p_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NEL1P3",
+      "type": "procedure",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_1_p_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NEL1P4",
+      "type": "procedure",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_1_p_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NEL1P5",
+      "type": "procedure",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_1_p_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NovaExpelL1E",
+      "type": "rangeditem",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_1_e",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NovaExpelL2E",
+      "type": "rangeditem",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_2_e",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NovaExpelL3E",
+      "type": "rangeditem",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_3_e",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NovaExpelL4E",
+      "type": "rangeditem",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_4_e",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NovaExpelL5E",
+      "type": "rangeditem",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_5_e",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level1"
+    },
+    {
+      "name": "NEL3P0",
+      "type": "procedure",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_3_p_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NEL3P1",
+      "type": "procedure",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_3_p_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NEL3P2",
+      "type": "procedure",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_3_p_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NEL3P3",
+      "type": "procedure",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_3_p_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NEL3P4",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_3_p_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NEL3P5",
+      "type": "procedure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nel_3_p_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NovaExpelL2E0",
+      "type": "rangeditem",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_2_e_0",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NovaExpelL2E1",
+      "type": "rangeditem",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_2_e_1",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NovaExpelL2E2",
+      "type": "rangeditem",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_2_e_2",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NovaExpelL2E3",
+      "type": "rangeditem",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_2_e_3",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NovaExpelL2E4",
+      "type": "rangeditem",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_2_e_4",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NovaExpelL2E5",
+      "type": "rangeditem",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_2_e_5",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level2"
+    },
+    {
+      "name": "NovaExpelL3E0",
+      "type": "rangeditem",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_l_3_e_0",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NELL3P0",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nell_3_p_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NELL3P1",
+      "type": "procedure",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nell_3_p_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NELL3P2",
+      "type": "procedure",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nell_3_p_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NELL3P3",
+      "type": "procedure",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nell_3_p_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NELL3P4",
+      "type": "procedure",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nell_3_p_4",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NELL3P5",
+      "type": "procedure",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nell_3_p_5",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NovalExpelL3E1",
+      "type": "rangeditem",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noval_expel_l_3_e_1",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NovalExpelL3E2",
+      "type": "rangeditem",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noval_expel_l_3_e_2",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NovalExpelL3E3",
+      "type": "rangeditem",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noval_expel_l_3_e_3",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NovalExpelL3E4",
+      "type": "rangeditem",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noval_expel_l_3_e_4",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NovalExpelL3E5",
+      "type": "rangeditem",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noval_expel_l_3_e_5",
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/VN Projectiles/Level3"
+    },
+    {
+      "name": "NovaExpel2",
+      "type": "procedure",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova"
+    },
+    {
+      "name": "NovaExpel3",
+      "type": "procedure",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nova_expel_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova"
+    },
+    {
+      "name": "VoltageNovascaledown",
+      "type": "procedure",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltage_novascaledown",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Ignition Abilities/Third Gen/Voltage Nova/Voltage NovaStages"
     }
   ],
   "variable_elements": [
     {
-      "name": "xpmax",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "XP",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "5.0"
-    },
-    {
-      "name": "SP",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "secondgenobsorb",
-      "type": "number",
+      "name": "voltagenovaactive",
+      "type": "logic",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "false"
     },
     {
       "name": "pressofdeath",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "false"
-    },
-    {
-      "name": "PlayerName",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Overheat",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "LVL",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     },
     {
       "name": "joinworldfirsttimestamina",
@@ -2003,6 +3304,66 @@
       "value": "false"
     },
     {
+      "name": "HasAwakened",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "firearrowactive",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "customeyesactive",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Adollaburst",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "xpmax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "XP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "5.0"
+    },
+    {
+      "name": "voltagenovastage",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "SP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "secondgenobsorb",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "LVL",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
       "name": "IgnitionAbilityTHIRDtype",
       "type": "number",
       "scope": "player_persistent",
@@ -2011,7 +3372,7 @@
     {
       "name": "IgnitionAbilitySECONDtype",
       "type": "number",
-      "scope": "player_lifetime",
+      "scope": "player_persistent",
       "value": "0"
     },
     {
@@ -2037,12 +3398,6 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
-    },
-    {
-      "name": "HasAwakened",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     },
     {
       "name": "Generation",
@@ -2113,8 +3468,14 @@
     {
       "name": "FireOxygen",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "0.0"
+    },
+    {
+      "name": "FireOverheatlevel",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     },
     {
       "name": "FireHealth",
@@ -2135,27 +3496,85 @@
       "value": "0"
     },
     {
-      "name": "Adollaburst",
+      "name": "abilityunlcoked",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PlayerName",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "voltagenovatime",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "tickspassed",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "tickspassedforfirexp",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "coolsdown2",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "novaexpel",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "abilityunlocked1",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
     },
     {
-      "name": "firearrowactive",
+      "name": "abilityunlocked2",
       "type": "logic",
       "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "abilityunlocked3",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "abilityunlocked4",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "tickspassedsoundfirestage",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "VNscaleup",
+      "type": "logic",
+      "scope": "player_lifetime",
       "value": "false"
     }
   ],
   "sound_elements": [
-    {
-      "name": "firearrowsound",
-      "files": [
-        "new-project-_1_"
-      ],
-      "category": "player",
-      "subtitle": ""
-    },
     {
       "name": "adollalink",
       "files": [
@@ -2163,42 +3582,84 @@
       ],
       "category": "player",
       "subtitle": ""
+    },
+    {
+      "name": "firewindsound",
+      "files": [
+        "untitled-video-made-with-clipchamp"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "novaexpelsound",
+      "files": [
+        "untitled-video-made-with-clipchamp-_1_"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "firewind",
+      "files": [
+        "untitled-video-made-with-clipchamp-_2_"
+      ],
+      "category": "player",
+      "subtitle": ""
     }
   ],
   "language_map": {
     "en_us": {
+      "item.fireforce.nova_expel_l_1_e": "Voltaga Nova Expel",
       "key.categories.fireforce": "Fire Force:Adolla",
-      "item.fireforce.fire_arrow_level_2_arrow": "Fire Arrow Projectile",
-      "item.fireforce.hybrid_eyes_spawn_egg": "Hybrid Eyes Spawn Egg",
-      "item.fireforce.custom_hbrid_2_spawn_egg": "Custom Hybrid Eyes2 Spawn Egg",
+      "item.fireforce.nova_expelstage_2": "Voltaga Nova Expel",
+      "item.fireforce.nova_expel_l_5_e": "Voltaga Nova Expel",
       "key.fireforce.adolla_burst_ability": "Ignition Ability 4",
-      "subtitles.adollalink": "",
-      "item.fireforce.fire_arrow_level_3_arrow": "Fire Arrow Projectile",
-      "advancements.fire_force_adolla.title": "Welcome to Fire Force Adolla",
-      "item.fireforce.fire_arrow_level_5_arrow": "Fire Arrow Projectile",
-      "advancements.fire_force_adolla.descr": "Join the world of Fire Force",
-      "item.fireforce.fire_arrow_projectile": "Fire Arrow Projectile",
-      "item.fireforce.fire_arrow_level_1": "Fire Arrow Projectile",
-      "entity.fireforce.hybrid_eyes": "Hybrid Eyes",
-      "entity.fireforce.customhybrid_1": "Custom Hybrid Eyes",
-      "item.fireforce.arroweyes_spawn_egg": "Hybrid Eyes Spawn Egg",
-      "item.fireforce.shinraseyes_spawn_egg": "shinra Eyes Spawn Egg",
+      "item.fireforce.nova_expel_l_3_e": "Voltaga Nova Expel",
+      "subtitles.novaexpel": "",
+      "item.fireforce.nova_expel_l_2_e_5": "Voltaga Nova Expel",
+      "item.fireforce.fire_arrow_level_3_arrow": "Fire Arrow Projectile3",
+      "item.fireforce.nova_expel_l_2_e_4": "Voltaga Nova Expel",
+      "item.fireforce.fire_arrow_level_1": "Fire Arrow Projectile1",
       "subtitles.firearrowsound": "",
-      "item.fireforce.fire_force_emblem": "Fire Force Emblem",
-      "item.fireforce.fire_arrow_adolla_arrow": "Fire Arrow Projectile",
-      "subtitles.firearrow": "",
+      "item.fireforce.fire_arrow_adolla_arrow": "Fire Arrow Projectile6",
       "key.fireforce.charge_key": "Charge Key",
-      "item.fireforce.fire_arrow_level_4_arrow": "Fire Arrow Projectile",
+      "item.fireforce.fire_arrow_level_4_arrow": "Fire Arrow Projectile4",
+      "subtitles.firewindsound": "",
+      "key.fireforce.charcater_profile": "Charcater Profile",
+      "item.fireforce.noval_expel_l_3_e_2": "Voltaga Nova Expel",
+      "item.fireforce.noval_expel_l_3_e_1": "Voltaga Nova Expel",
+      "item.fireforce.noval_expel_l_3_e_4": "Voltaga Nova Expel",
+      "item.fireforce.noval_expel_l_3_e_3": "Voltaga Nova Expel",
+      "item.fireforce.ne_4_entity": "Voltaga Nova Expel",
+      "item.fireforce.noval_expel_l_3_e_5": "Voltaga Nova Expel",
+      "subtitles.firewind": "",
+      "item.fireforce.nova_expel_l_2_e": "Voltaga Nova Expel",
+      "item.fireforce.fire_arrow_level_2_arrow": "Fire Arrow Projectile2",
+      "effect.tephrosis": "Tephrosis",
+      "item.fireforce.nova_expel_l_4_e": "Voltaga Nova Expel",
+      "subtitles.adollalink": "",
+      "advancements.fire_force_adolla.title": "Welcome to Fire Force Adolla",
+      "item.fireforce.fire_arrow_level_5_arrow": "Fire Arrow Projectile5",
+      "item.fireforce.fire_arrow_projectile": "Fire Arrow Projectile",
+      "advancements.fire_force_adolla.descr": "Join the world of Fire Force",
+      "item.fireforce.nova_expel_l_3_e_0": "Voltaga Nova Expel",
+      "item.fireforce.voltaga_nova_expel": "Voltaga Nova Expel",
+      "item.fireforce.fire_force_emblem": "Fire Force Emblem",
+      "item.fireforce.nova_expel_l_2_e_1": "Voltaga Nova Expel",
+      "item.fireforce.nova_expel_l_2_e_0": "Voltaga Nova Expel",
+      "item.fireforce.nova_expel_l_2_e_3": "Voltaga Nova Expel",
+      "subtitles.firearrow": "",
+      "item.fireforce.nova_expel_l_2_e_2": "Voltaga Nova Expel",
       "key.fireforce.ignition_ability_1": "Ignition Ability 1",
-      "item.fireforce.customhybrid_1_spawn_egg": "Custom Hybrid Eyes Spawn Egg",
-      "entity.fireforce.custom_hbrid_2": "Custom Hybrid Eyes2",
       "key.fireforce.ignition_ability_2": "Ignition Ability 2",
+      "item.fireforce.firearrowprojectileadollapressofdeath": "Fire Arrow Projectile8",
+      "subtitles.novaexpelsound": "",
       "key.fireforce.ignition_ability_3": "Ignition Ability 3",
       "key.fireforce.ignition_ability_4": "Ignition Ability 4",
-      "entity.fireforce.shinraseyes": "shinra Eyes",
-      "entity.fireforce.arroweyes": "Hybrid Eyes",
-      "key.fireforce.charcater_profile": "Charcater Profile",
-      "item.fireforce.fire_arrow_pressof_death": "Fire Arrow Projectile"
+      "item.fireforce.ne_3_entity": "Voltaga Nova Expel",
+      "item.fireforce.fire_arrow_pressof_death": "Fire Arrow Projectile7",
+      "item.fireforce.ne_5_entity": "Voltaga Nova Expel"
     }
   },
   "foldersRoot": {
@@ -2233,6 +3694,41 @@
                   {
                     "name": "Condensed Arrow",
                     "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Voltage Nova",
+                "children": [
+                  {
+                    "name": "VN Projectiles",
+                    "children": [
+                      {
+                        "name": "Level 0",
+                        "children": []
+                      },
+                      {
+                        "name": "Level1",
+                        "children": []
+                      },
+                      {
+                        "name": "Level2",
+                        "children": []
+                      },
+                      {
+                        "name": "Level3",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Voltage NovaStages",
+                    "children": [
+                      {
+                        "name": "VN",
+                        "children": []
+                      }
+                    ]
                   }
                 ]
               }
@@ -2282,6 +3778,10 @@
             "children": [
               {
                 "name": "Generation Set",
+                "children": []
+              },
+              {
+                "name": "Custom Eyes",
                 "children": []
               }
             ]
@@ -2338,6 +3838,10 @@
       {
         "name": "Particles",
         "children": []
+      },
+      {
+        "name": "Effects",
+        "children": []
       }
     ]
   },
@@ -2354,7 +3858,8 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer"
+      "kleidersplayerrenderer",
+      "allmods"
     ],
     "currentGenerator": "forge-1.16.5",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",

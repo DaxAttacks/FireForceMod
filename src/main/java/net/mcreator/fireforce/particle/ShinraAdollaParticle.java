@@ -60,7 +60,7 @@ public class ShinraAdollaParticle {
 		public void tick() {
 			super.tick();
 			if (!this.isExpired) {
-				this.setSprite(this.spriteSet.get((this.age / 3) % 3 + 1, 3));
+				this.setSprite(this.spriteSet.get((this.age / 3) % 1 + 1, 1));
 			}
 		}
 	}

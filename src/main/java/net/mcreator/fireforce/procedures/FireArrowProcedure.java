@@ -1,6 +1,15 @@
 package net.mcreator.fireforce.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
+
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireforce.FireforceModVariables;
@@ -63,61 +72,341 @@ public class FireArrowProcedure {
 					});
 				}
 				if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).pressofdeath == true) {
+					FireArrowPressofDeathPProcedure.executeProcedure(
+							Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					{
+						Entity _ent = entity;
+						if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+							_ent.world.getServer().getCommandManager().handleCommand(
+									_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+									"effect give @s minecraft:slowness 1 20 true");
+						}
+					}
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private IWorld world;
+
+						public void start(IWorld world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							if (world instanceof World && !world.isRemote()) {
+								((World) world).playSound(null, new BlockPos(x, y, z),
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1);
+							} else {
+								((World) world).playSound(x, y, z,
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1, false);
+							}
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, (int) 10);
+				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 0) {
-					FireArrorLevel0Procedure.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
-									new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					FireArrorLevel0Procedure.executeProcedure(
+							Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					{
+						Entity _ent = entity;
+						if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+							_ent.world.getServer().getCommandManager().handleCommand(
+									_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+									"effect give @s minecraft:slowness 1 20 true");
+						}
+					}
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private IWorld world;
+
+						public void start(IWorld world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							if (world instanceof World && !world.isRemote()) {
+								((World) world).playSound(null, new BlockPos(x, y, z),
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1);
+							} else {
+								((World) world).playSound(x, y, z,
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1, false);
+							}
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, (int) 10);
 				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 1) {
-					FireArrowLevel1PProcedure.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
-									new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					FireArrowLevel1PProcedure.executeProcedure(
+							Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					{
+						Entity _ent = entity;
+						if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+							_ent.world.getServer().getCommandManager().handleCommand(
+									_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+									"effect give @s minecraft:slowness 1 20 true");
+						}
+					}
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private IWorld world;
+
+						public void start(IWorld world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							if (world instanceof World && !world.isRemote()) {
+								((World) world).playSound(null, new BlockPos(x, y, z),
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1);
+							} else {
+								((World) world).playSound(x, y, z,
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1, false);
+							}
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, (int) 10);
 				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 2) {
-					FireArrowLevel2PProcedure.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
-									new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					FireArrowLevel2PProcedure.executeProcedure(
+							Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					{
+						Entity _ent = entity;
+						if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+							_ent.world.getServer().getCommandManager().handleCommand(
+									_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+									"effect give @s minecraft:slowness 1 20 true");
+						}
+					}
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private IWorld world;
+
+						public void start(IWorld world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							if (world instanceof World && !world.isRemote()) {
+								((World) world).playSound(null, new BlockPos(x, y, z),
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1);
+							} else {
+								((World) world).playSound(x, y, z,
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1, false);
+							}
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, (int) 10);
 				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 3) {
-					FireArrowLevel3PProcedure.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
-									new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					FireArrowLevel3PProcedure.executeProcedure(
+							Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					{
+						Entity _ent = entity;
+						if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+							_ent.world.getServer().getCommandManager().handleCommand(
+									_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+									"effect give @s minecraft:slowness 1 20 true");
+						}
+					}
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private IWorld world;
+
+						public void start(IWorld world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							if (world instanceof World && !world.isRemote()) {
+								((World) world).playSound(null, new BlockPos(x, y, z),
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1);
+							} else {
+								((World) world).playSound(x, y, z,
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1, false);
+							}
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, (int) 10);
 				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 4) {
-					FireArrowLevel4PProcedure.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
-									new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					FireArrowLevel4PProcedure.executeProcedure(
+							Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					{
+						Entity _ent = entity;
+						if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+							_ent.world.getServer().getCommandManager().handleCommand(
+									_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+									"effect give @s minecraft:slowness 1 20 true");
+						}
+					}
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private IWorld world;
+
+						public void start(IWorld world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							if (world instanceof World && !world.isRemote()) {
+								((World) world).playSound(null, new BlockPos(x, y, z),
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1);
+							} else {
+								((World) world).playSound(x, y, z,
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1, false);
+							}
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, (int) 10);
 				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 5) {
-					FireArrowLevel5PProcedure.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
-									new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireforceModVariables.PlayerVariables())).FirePower == 6) {
-					FireArrowAdollaPProcedure.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
-									new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-				} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireforceModVariables.PlayerVariables())).pressofdeath == true) {
-					FireArrowPressofDeathPProcedure.executeProcedure(Stream
-							.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
-									new AbstractMap.SimpleEntry<>("entity", entity))
-							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					FireArrowLevel5PProcedure.executeProcedure(
+							Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
+									.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+					{
+						Entity _ent = entity;
+						if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+							_ent.world.getServer().getCommandManager().handleCommand(
+									_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+									"effect give @s minecraft:slowness 1 20 true");
+						}
+					}
+					new Object() {
+						private int ticks = 0;
+						private float waitTicks;
+						private IWorld world;
+
+						public void start(IWorld world, int waitTicks) {
+							this.waitTicks = waitTicks;
+							MinecraftForge.EVENT_BUS.register(this);
+							this.world = world;
+						}
+
+						@SubscribeEvent
+						public void tick(TickEvent.ServerTickEvent event) {
+							if (event.phase == TickEvent.Phase.END) {
+								this.ticks += 1;
+								if (this.ticks >= this.waitTicks)
+									run();
+							}
+						}
+
+						private void run() {
+							if (world instanceof World && !world.isRemote()) {
+								((World) world).playSound(null, new BlockPos(x, y, z),
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1);
+							} else {
+								((World) world).playSound(x, y, z,
+										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+												.getValue(new ResourceLocation("fireforce:firearrowsound")),
+										SoundCategory.PLAYERS, (float) 1, (float) 1, false);
+							}
+							MinecraftForge.EVENT_BUS.unregister(this);
+						}
+					}.start(world, (int) 10);
 				}
 			}
 		}

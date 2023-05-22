@@ -16,10 +16,11 @@ public class HealthStatProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		double maxhealth = 0;
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).SP >= 1) {
+				.orElse(new FireforceModVariables.PlayerVariables())).SP >= 10) {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireforceModVariables.PlayerVariables())).FireHealth <= 30) {
+					.orElse(new FireforceModVariables.PlayerVariables())).FireHealth < 10) {
 				{
 					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new FireforceModVariables.PlayerVariables())).FireHealth + 1);
@@ -30,7 +31,7 @@ public class HealthStatProcedure {
 				}
 				{
 					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).SP - 1);
+							.orElse(new FireforceModVariables.PlayerVariables())).SP - 10);
 					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SP = _setval;
 						capability.syncPlayerVariables(entity);

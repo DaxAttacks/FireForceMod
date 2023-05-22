@@ -59,8 +59,9 @@ public class Testeyes3Procedure {
 					//  _evt.setCanceled(true); 
 				}
 				new com.kleiders.kleidersplayerrenderer.InternalPlayerRenderer(_evt.getRenderer().getRenderManager(),
-						new ResourceLocation("fireforce:textures/entities/natakueyes1.png")).render((AbstractClientPlayerEntity) _evt.getEntity(),
-								_evt.getEntity().rotationYaw, _evt.getPartialRenderTick(), _evt.getMatrixStack(), _evt.getBuffers(), _evt.getLight());
+						new ResourceLocation("fireforce:textures/entities/ozmenosxarmenoseyes.png"))
+						.render((AbstractClientPlayerEntity) _evt.getEntity(), _evt.getEntity().rotationYaw, _evt.getPartialRenderTick(),
+								_evt.getMatrixStack(), _evt.getBuffers(), _evt.getLight());
 			}
 		}
 	}

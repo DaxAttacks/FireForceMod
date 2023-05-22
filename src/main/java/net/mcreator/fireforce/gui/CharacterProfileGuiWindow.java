@@ -124,5 +124,11 @@ public class CharacterProfileGuiWindow extends ContainerScreen<CharacterProfileG
 				CharacterProfileGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
+		this.addButton(new Button(this.guiLeft + 245, this.guiTop + 216, 56, 20, new StringTextComponent("SKILLS"), e -> {
+			if (true) {
+				FireforceMod.PACKET_HANDLER.sendToServer(new CharacterProfileGui.ButtonPressedMessage(1, x, y, z));
+				CharacterProfileGui.handleButtonAction(entity, 1, x, y, z);
+			}
+		}));
 	}
 }

@@ -49,168 +49,133 @@ public class FireArrowParticlesProcedure {
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1 ^0.5");
+							"particle minecraft:flame ^ ^2 ^2");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1.1 ^0.5");
+							"particle minecraft:flame ^ ^2.1 ^1.9");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1.1 ^0.5");
+							"particle minecraft:flame ^ ^2.2 ^1.8");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1.2 ^0.5");
+							"particle minecraft:flame ^ ^2.3 ^1.7");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1.3 ^0.5");
+							"particle minecraft:flame ^ ^2.4 ^1.6");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^0.5 ^1.4 ^0.5");
+							"particle minecraft:flame ^ ^2.5 ^1.5");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1.5 ^0.5");
+							"particle minecraft:flame ^ ^2.6 ^1.5");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1.6 ^0.5");
+							"particle minecraft:flame ^ ^2.7 ^1.5");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1.7^0.5");
+							"particle minecraft:flame ^ ^2.8 ^1.5");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1.6 ^0.5");
+							"particle minecraft:flame ^ ^2.9 ^1.5");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1.8 ^0.5");
+							"particle minecraft:flame ^ ^0.9 ^2");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^1.9 ^0.5");
+							"particle minecraft:flame ^ ^0.7 ^1.8");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^2 ^0.5");
+							"particle minecraft:flame ^ ^0.6 ^1.7");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^2.1 ^0.4");
+							"particle minecraft:flame ^ ^0.5 ^1.6");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^2.2 ^0.3");
+							"particle minecraft:flame ^ ^0.4 ^1.5");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^2.3 ^0.2");
+							"particle minecraft:flame ^ ^0.3 ^1.5");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^2.4 ^0.1");
+							"particle minecraft:flame ^ ^0.2 ^1.5");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^2.5 ^");
+							"particle minecraft:flame ^ ^0.1 ^1.5");
 				}
 			}
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^0.9 ^0.5");
-				}
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^0.8 ^0.4");
-				}
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^0.7 ^0.3");
-				}
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^0.6 ^0.2");
-				}
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^0.5 ^0.1");
-				}
-			}
-			{
-				Entity _ent = entity;
-				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-							"particle minecraft:flame ^ ^0.4 ^");
+							"particle minecraft:flame ^ ^ ^1.5");
 				}
 			}
 		}

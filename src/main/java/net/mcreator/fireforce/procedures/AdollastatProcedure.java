@@ -17,24 +17,27 @@ public class AdollastatProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).SP >= 2) {
+				.orElse(new FireforceModVariables.PlayerVariables())).Adollaburst == true) {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireforceModVariables.PlayerVariables())).adollalburstevel <= 5) {
-				{
-					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).adollalburstevel + 1);
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.adollalburstevel = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).SP - 2);
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.SP = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					.orElse(new FireforceModVariables.PlayerVariables())).SP >= 2) {
+				if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).adollalburstevel <= 5) {
+					{
+						double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new FireforceModVariables.PlayerVariables())).adollalburstevel + 1);
+						entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.adollalburstevel = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					{
+						double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new FireforceModVariables.PlayerVariables())).SP - 2);
+						entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.SP = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 			}
 		}

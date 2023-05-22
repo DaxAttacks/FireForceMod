@@ -1,0 +1,17 @@
+{
+  "_fv": 33,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Tephrosis",
+    "icon": "tephrosis.png",
+    "color": {
+      "value": -15790321,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

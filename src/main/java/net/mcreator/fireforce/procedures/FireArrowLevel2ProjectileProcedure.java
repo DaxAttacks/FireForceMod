@@ -18,7 +18,7 @@ public class FireArrowLevel2ProjectileProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).attackEntityFrom(new DamageSource("Fire Arrow").setDamageBypassesArmor(), (float) 6);
+			((LivingEntity) entity).attackEntityFrom(new DamageSource("Fire Arrow").setDamageBypassesArmor(), (float) 8);
 		}
 	}
 }

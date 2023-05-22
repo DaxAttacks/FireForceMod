@@ -14,6 +14,7 @@ import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.fireforce.procedures.IfadollaProcedure;
 import net.mcreator.fireforce.procedures.GenInfernalProcedure;
 import net.mcreator.fireforce.procedures.Gen6Procedure;
 import net.mcreator.fireforce.procedures.Gen5Procedure;
@@ -115,12 +116,12 @@ public class CharacterProfileStatsGuiWindow extends ContainerScreen<CharacterPro
 		this.font.drawString(ms, "", 218, 257, -16777216);
 		this.font.drawString(ms, "Health: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth) + "", 215, 198, -16777216);
-		this.font.drawString(ms, "Adolla Burst: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).adollalburstevel) + "", 217, 320, -16777216);
+		if (IfadollaProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
+			this.font.drawString(ms, "Adolla Burst: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireforceModVariables.PlayerVariables())).adollalburstevel) + "", 217, 320, -16777216);
 		this.font.drawString(ms, "Heat Resistance: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).FireResistancedefense) + "", 214, 270, -16777216);
-		this.font.drawString(ms, "Fire Power: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FirePower) + "", 215, 296, -16777216);
 	}
 
 	@Override
@@ -158,21 +159,23 @@ public class CharacterProfileStatsGuiWindow extends ContainerScreen<CharacterPro
 			}
 		}));
 		this.addButton(new Button(this.guiLeft + 183, this.guiTop + 314, 30, 20, new StringTextComponent("+"), e -> {
-			if (true) {
+			if (IfadollaProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+					(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
 				FireforceMod.PACKET_HANDLER.sendToServer(new CharacterProfileStatsGui.ButtonPressedMessage(4, x, y, z));
 				CharacterProfileStatsGui.handleButtonAction(entity, 4, x, y, z);
 			}
-		}));
+		}) {
+			@Override
+			public void render(MatrixStack ms, int gx, int gy, float ticks) {
+				if (IfadollaProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
 		this.addButton(new Button(this.guiLeft + 172, this.guiTop + 346, 30, 20, new StringTextComponent("<"), e -> {
 			if (true) {
 				FireforceMod.PACKET_HANDLER.sendToServer(new CharacterProfileStatsGui.ButtonPressedMessage(5, x, y, z));
 				CharacterProfileStatsGui.handleButtonAction(entity, 5, x, y, z);
-			}
-		}));
-		this.addButton(new Button(this.guiLeft + 183, this.guiTop + 290, 30, 20, new StringTextComponent("+"), e -> {
-			if (true) {
-				FireforceMod.PACKET_HANDLER.sendToServer(new CharacterProfileStatsGui.ButtonPressedMessage(6, x, y, z));
-				CharacterProfileStatsGui.handleButtonAction(entity, 6, x, y, z);
 			}
 		}));
 	}

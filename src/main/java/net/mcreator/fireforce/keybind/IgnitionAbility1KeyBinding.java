@@ -18,7 +18,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.fireforce.procedures.TestProcedure;
+import net.mcreator.fireforce.procedures.KeyZProcedure;
 import net.mcreator.fireforce.FireforceModElements;
 import net.mcreator.fireforce.FireforceMod;
 
@@ -97,7 +97,7 @@ public class IgnitionAbility1KeyBinding extends FireforceModElements.ModElement 
 			return;
 		if (type == 0) {
 
-			TestProcedure.executeProcedure(Stream
+			KeyZProcedure.executeProcedure(Stream
 					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
 							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));

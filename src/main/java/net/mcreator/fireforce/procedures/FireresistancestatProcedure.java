@@ -18,32 +18,21 @@ public class FireresistancestatProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).SP >= 1) {
-			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen <= 20) {
-				{
-					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen + 1);
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.FireOxygen = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygenMax + 100);
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.FireOxygenMax = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).SP - 1);
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.SP = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
+			{
+				double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).FireOxygenMax + 100);
+				entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.FireOxygenMax = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireforceModVariables.PlayerVariables())).SP - 1);
+				entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SP = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 	}

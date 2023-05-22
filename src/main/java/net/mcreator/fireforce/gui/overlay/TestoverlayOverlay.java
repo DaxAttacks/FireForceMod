@@ -48,11 +48,14 @@ public class TestoverlayOverlay {
 			if (true) {
 				if (Gen3Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 						(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
-					Minecraft.getInstance().fontRenderer
-							.drawString(event.getMatrixStack(),
-									"" + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-											.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen) + "",
-									posX + -185, posY + 93, -13369345);
+					Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
+							"" + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+									.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen) + "",
+							posX + 98, posY + 105, -13369345);
+				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
+						"" + ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new FireforceModVariables.PlayerVariables())).FireOverheatlevel) + "",
+						posX + 86, posY + 29, -256);
 			}
 		}
 	}
