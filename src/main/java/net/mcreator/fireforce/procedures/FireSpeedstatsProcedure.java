@@ -1,5 +1,8 @@
 package net.mcreator.fireforce.procedures;
 
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireforce.FireforceModVariables;
@@ -19,7 +22,7 @@ public class FireSpeedstatsProcedure {
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).SP >= 1) {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireforceModVariables.PlayerVariables())).FireSpeed < 5) {
+					.orElse(new FireforceModVariables.PlayerVariables())).FireSpeed <= 9) {
 				{
 					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new FireforceModVariables.PlayerVariables())).FireSpeed + 1);
@@ -36,6 +39,15 @@ public class FireSpeedstatsProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity).clearActivePotions();
+			} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireforceModVariables.PlayerVariables())).FireSpeed >= 10) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("This stat has been maxed out"), (false));
+				}
+				if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).closeScreen();
 			}
 		}
 	}

@@ -40,7 +40,7 @@
       "name": "NELL3P0"
     },
     "onBulletFlyingTick": {
-      "name": "NEparticles5"
+      "name": "VoltagaNovaExpelWhileProjectileFlyingTick"
     }
   }
 }

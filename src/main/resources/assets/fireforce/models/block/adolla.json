@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "fireforce:blocks/adolla",
+    "up": "fireforce:blocks/adolla",
+    "north": "fireforce:blocks/adolla",
+    "east": "fireforce:blocks/adolla",
+    "south": "fireforce:blocks/adolla",
+    "west": "fireforce:blocks/adolla",
+    "particle": "fireforce:blocks/adolla"
+  }
+}

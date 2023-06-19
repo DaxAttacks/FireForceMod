@@ -1,0 +1,7 @@
+{
+  "parent": "fireforce:custom/excalburversion1",
+  "textures": {
+    "0": "fireforce:blocks/excalibur1",
+    "particle": "fireforce:items/picsart_23-05-09_23-44-06-056"
+  }
+}

@@ -1,6 +1,8 @@
 package net.mcreator.fireforce.procedures;
 
 import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireforce.FireforceModVariables;
@@ -48,13 +50,6 @@ public class NovaExpelProcedure {
 				.orElse(new FireforceModVariables.PlayerVariables())).IgnitionAbilityTHIRDtype == 2) {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new FireforceModVariables.PlayerVariables())).coolsdown2 == 0) {
-				{
-					boolean _setval = (true);
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.novaexpel = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 				if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).pressofdeath == true) {
 					NovaExpel3Procedure.executeProcedure(Stream
@@ -104,6 +99,11 @@ public class NovaExpelProcedure {
 									new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z),
 									new AbstractMap.SimpleEntry<>("entity", entity))
 							.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				}
+			} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireforceModVariables.PlayerVariables())).coolsdown2 > 0) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Cooldown is Active"), (true));
 				}
 			}
 		}

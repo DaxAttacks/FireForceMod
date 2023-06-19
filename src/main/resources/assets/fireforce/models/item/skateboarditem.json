@@ -1,0 +1,7 @@
+{
+  "parent": "fireforce:custom/skateboard_-_converted",
+  "textures": {
+    "2": "fireforce:blocks/sb",
+    "particle": "fireforce:items/sb"
+  }
+}

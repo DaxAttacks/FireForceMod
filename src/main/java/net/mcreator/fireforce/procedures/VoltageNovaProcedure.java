@@ -28,13 +28,6 @@ public class VoltageNovaProcedure {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new FireforceModVariables.PlayerVariables())).cooldown1 == 0) {
 				{
-					double _setval = 1;
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.cooldown1 = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
 					double _setval = 0;
 					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.tickspassed = _setval;
@@ -45,13 +38,6 @@ public class VoltageNovaProcedure {
 					double _setval = 0;
 					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.tickspassedsoundfirestage = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					boolean _setval = (true);
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.voltagenovaactive = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

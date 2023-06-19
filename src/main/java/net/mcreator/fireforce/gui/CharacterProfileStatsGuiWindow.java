@@ -105,8 +105,8 @@ public class CharacterProfileStatsGuiWindow extends ContainerScreen<CharacterPro
 			this.font.drawString(ms, "Demon Infernal", 208, 169, -16777216);
 		this.font.drawString(ms, "" + ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).PlayerName) + "", 228, 155, -16777216);
-		this.font.drawString(ms, "Level: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).LVL) + "", 239, 356, -16777216);
+		this.font.drawString(ms, "Fire Power: " + ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireforceModVariables.PlayerVariables())).FirePower) + "", 239, 356, -16777216);
 		this.font.drawString(ms, "Speed: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).FireSpeed) + "", 216, 222, -16777216);
 		this.font.drawString(ms, "Oxygen Level: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -152,7 +152,7 @@ public class CharacterProfileStatsGuiWindow extends ContainerScreen<CharacterPro
 				CharacterProfileStatsGui.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 183, this.guiTop + 266, 30, 20, new StringTextComponent("+"), e -> {
+		this.addButton(new Button(this.guiLeft + 182, this.guiTop + 266, 30, 20, new StringTextComponent("+"), e -> {
 			if (true) {
 				FireforceMod.PACKET_HANDLER.sendToServer(new CharacterProfileStatsGui.ButtonPressedMessage(3, x, y, z));
 				CharacterProfileStatsGui.handleButtonAction(entity, 3, x, y, z);

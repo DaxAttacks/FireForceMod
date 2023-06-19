@@ -17,7 +17,7 @@ public class Overheat5Procedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireOverheatlevel == 5) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireOverheatlevel >= 5) {
 			return true;
 		}
 		return false;

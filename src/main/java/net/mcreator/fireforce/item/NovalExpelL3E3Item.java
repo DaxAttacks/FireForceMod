@@ -32,7 +32,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
-import net.mcreator.fireforce.procedures.NEparticles5Procedure;
+import net.mcreator.fireforce.procedures.VoltagaNovaExpelWhileProjectileFlyingTickProcedure;
 import net.mcreator.fireforce.procedures.NELL3P3Procedure;
 import net.mcreator.fireforce.entity.renderer.NovalExpelL3E3Renderer;
 import net.mcreator.fireforce.FireforceModElements;
@@ -206,8 +206,9 @@ public class NovalExpelL3E3Item extends FireforceModElements.ModElement {
 			Entity entity = this.func_234616_v_();
 			Entity immediatesourceentity = this;
 
-			NEparticles5Procedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("immediatesourceentity", immediatesourceentity))
+			VoltagaNovaExpelWhileProjectileFlyingTickProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("immediatesourceentity", immediatesourceentity))
 					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			if (this.inGround)
 				this.remove();

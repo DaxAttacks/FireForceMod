@@ -120,6 +120,34 @@ public class FireforceModVariables {
 			nbt.putBoolean("abilityunlocked4", instance.abilityunlocked4);
 			nbt.putDouble("tickspassedsoundfirestage", instance.tickspassedsoundfirestage);
 			nbt.putBoolean("VNscaleup", instance.VNscaleup);
+			nbt.putDouble("tickspassedtattoshowing", instance.tickspassedtattoshowing);
+			nbt.putBoolean("FlamingInkActive", instance.FlamingInkActive);
+			nbt.putBoolean("YorubaBlacksmithactive", instance.YorubaBlacksmithactive);
+			nbt.putBoolean("YorubaLanceactive", instance.YorubaLanceactive);
+			nbt.putDouble("cooldown3", instance.cooldown3);
+			nbt.putBoolean("SlamDunkBurialActive", instance.SlamDunkBurialActive);
+			nbt.putDouble("staminatickspassed", instance.staminatickspassed);
+			nbt.putDouble("cooldown4", instance.cooldown4);
+			nbt.putDouble("cooldown5", instance.cooldown5);
+			nbt.putDouble("cooldown6", instance.cooldown6);
+			nbt.putBoolean("hastephrosis", instance.hastephrosis);
+			nbt.putDouble("overheatstaminatickspassed", instance.overheatstaminatickspassed);
+			nbt.putDouble("karma", instance.karma);
+			nbt.putDouble("affiliation", instance.affiliation);
+			nbt.putDouble("devilsflightlevel", instance.devilsflightlevel);
+			nbt.putDouble("tickspassedflight", instance.tickspassedflight);
+			nbt.putBoolean("learnedcorna", instance.learnedcorna);
+			nbt.putDouble("fireparticleticks", instance.fireparticleticks);
+			nbt.putBoolean("rapidmankick", instance.rapidmankick);
+			nbt.putBoolean("abilityunlocked5", instance.abilityunlocked5);
+			nbt.putBoolean("abilityunlocked6", instance.abilityunlocked6);
+			nbt.putBoolean("reflectactive", instance.reflectactive);
+			nbt.putDouble("reflect", instance.reflect);
+			nbt.putBoolean("firexpactive", instance.firexpactive);
+			nbt.putDouble("adollacooldown", instance.adollacooldown);
+			nbt.putDouble("stamp", instance.stamp);
+			nbt.putBoolean("STAMP", instance.STAMP);
+			nbt.putBoolean("STAMP2", instance.STAMP2);
 			return nbt;
 		}
 
@@ -175,6 +203,34 @@ public class FireforceModVariables {
 			instance.abilityunlocked4 = nbt.getBoolean("abilityunlocked4");
 			instance.tickspassedsoundfirestage = nbt.getDouble("tickspassedsoundfirestage");
 			instance.VNscaleup = nbt.getBoolean("VNscaleup");
+			instance.tickspassedtattoshowing = nbt.getDouble("tickspassedtattoshowing");
+			instance.FlamingInkActive = nbt.getBoolean("FlamingInkActive");
+			instance.YorubaBlacksmithactive = nbt.getBoolean("YorubaBlacksmithactive");
+			instance.YorubaLanceactive = nbt.getBoolean("YorubaLanceactive");
+			instance.cooldown3 = nbt.getDouble("cooldown3");
+			instance.SlamDunkBurialActive = nbt.getBoolean("SlamDunkBurialActive");
+			instance.staminatickspassed = nbt.getDouble("staminatickspassed");
+			instance.cooldown4 = nbt.getDouble("cooldown4");
+			instance.cooldown5 = nbt.getDouble("cooldown5");
+			instance.cooldown6 = nbt.getDouble("cooldown6");
+			instance.hastephrosis = nbt.getBoolean("hastephrosis");
+			instance.overheatstaminatickspassed = nbt.getDouble("overheatstaminatickspassed");
+			instance.karma = nbt.getDouble("karma");
+			instance.affiliation = nbt.getDouble("affiliation");
+			instance.devilsflightlevel = nbt.getDouble("devilsflightlevel");
+			instance.tickspassedflight = nbt.getDouble("tickspassedflight");
+			instance.learnedcorna = nbt.getBoolean("learnedcorna");
+			instance.fireparticleticks = nbt.getDouble("fireparticleticks");
+			instance.rapidmankick = nbt.getBoolean("rapidmankick");
+			instance.abilityunlocked5 = nbt.getBoolean("abilityunlocked5");
+			instance.abilityunlocked6 = nbt.getBoolean("abilityunlocked6");
+			instance.reflectactive = nbt.getBoolean("reflectactive");
+			instance.reflect = nbt.getDouble("reflect");
+			instance.firexpactive = nbt.getBoolean("firexpactive");
+			instance.adollacooldown = nbt.getDouble("adollacooldown");
+			instance.stamp = nbt.getDouble("stamp");
+			instance.STAMP = nbt.getBoolean("STAMP");
+			instance.STAMP2 = nbt.getBoolean("STAMP2");
 		}
 	}
 
@@ -198,7 +254,7 @@ public class FireforceModVariables {
 		public double IgnitionAbilityINFERNALtype = 0;
 		public double IgnitionAbilityFOURTHtype = 0;
 		public double IgnitionAbilityDEMONINFERNALtype = 0;
-		public double heatabsorbed = 0;
+		public double heatabsorbed = 2000000.0;
 		public double Generation = 0;
 		public double FireSpeed = 0;
 		public double FireResistancedefense = 0;
@@ -207,7 +263,7 @@ public class FireforceModVariables {
 		public double firepowerxp3 = 0;
 		public double firepowerxp2 = 0;
 		public double firepowerxp1 = 0;
-		public double firepowerxp0 = 0;
+		public double firepowerxp0 = 190.0;
 		public double FirePower = 0;
 		public double FireOxygenMax = 0;
 		public double FireOxygen = 0.0;
@@ -222,12 +278,40 @@ public class FireforceModVariables {
 		public double tickspassedforfirexp = 0;
 		public double coolsdown2 = 0;
 		public boolean novaexpel = false;
-		public boolean abilityunlocked1 = false;
-		public boolean abilityunlocked2 = false;
-		public boolean abilityunlocked3 = false;
-		public boolean abilityunlocked4 = false;
+		public boolean abilityunlocked1 = true;
+		public boolean abilityunlocked2 = true;
+		public boolean abilityunlocked3 = true;
+		public boolean abilityunlocked4 = true;
 		public double tickspassedsoundfirestage = 0;
 		public boolean VNscaleup = false;
+		public double tickspassedtattoshowing = 0;
+		public boolean FlamingInkActive = false;
+		public boolean YorubaBlacksmithactive = false;
+		public boolean YorubaLanceactive = false;
+		public double cooldown3 = 0;
+		public boolean SlamDunkBurialActive = false;
+		public double staminatickspassed = 0;
+		public double cooldown4 = 0;
+		public double cooldown5 = 0;
+		public double cooldown6 = 0;
+		public boolean hastephrosis = false;
+		public double overheatstaminatickspassed = 0;
+		public double karma = 0;
+		public double affiliation = 0.0;
+		public double devilsflightlevel = 0;
+		public double tickspassedflight = 0;
+		public boolean learnedcorna = false;
+		public double fireparticleticks = 0;
+		public boolean rapidmankick = false;
+		public boolean abilityunlocked5 = false;
+		public boolean abilityunlocked6 = false;
+		public boolean reflectactive = false;
+		public double reflect = 0.0;
+		public boolean firexpactive = false;
+		public double adollacooldown = 0;
+		public double stamp = 0;
+		public boolean STAMP = false;
+		public boolean STAMP2 = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
@@ -296,6 +380,12 @@ public class FireforceModVariables {
 		clone.abilityunlocked2 = original.abilityunlocked2;
 		clone.abilityunlocked3 = original.abilityunlocked3;
 		clone.abilityunlocked4 = original.abilityunlocked4;
+		clone.tickspassedtattoshowing = original.tickspassedtattoshowing;
+		clone.karma = original.karma;
+		clone.affiliation = original.affiliation;
+		clone.learnedcorna = original.learnedcorna;
+		clone.abilityunlocked5 = original.abilityunlocked5;
+		clone.abilityunlocked6 = original.abilityunlocked6;
 		if (!event.isWasDeath()) {
 			clone.voltagenovaactive = original.voltagenovaactive;
 			clone.pressofdeath = original.pressofdeath;
@@ -312,6 +402,28 @@ public class FireforceModVariables {
 			clone.novaexpel = original.novaexpel;
 			clone.tickspassedsoundfirestage = original.tickspassedsoundfirestage;
 			clone.VNscaleup = original.VNscaleup;
+			clone.FlamingInkActive = original.FlamingInkActive;
+			clone.YorubaBlacksmithactive = original.YorubaBlacksmithactive;
+			clone.YorubaLanceactive = original.YorubaLanceactive;
+			clone.cooldown3 = original.cooldown3;
+			clone.SlamDunkBurialActive = original.SlamDunkBurialActive;
+			clone.staminatickspassed = original.staminatickspassed;
+			clone.cooldown4 = original.cooldown4;
+			clone.cooldown5 = original.cooldown5;
+			clone.cooldown6 = original.cooldown6;
+			clone.hastephrosis = original.hastephrosis;
+			clone.overheatstaminatickspassed = original.overheatstaminatickspassed;
+			clone.devilsflightlevel = original.devilsflightlevel;
+			clone.tickspassedflight = original.tickspassedflight;
+			clone.fireparticleticks = original.fireparticleticks;
+			clone.rapidmankick = original.rapidmankick;
+			clone.reflectactive = original.reflectactive;
+			clone.reflect = original.reflect;
+			clone.firexpactive = original.firexpactive;
+			clone.adollacooldown = original.adollacooldown;
+			clone.stamp = original.stamp;
+			clone.STAMP = original.STAMP;
+			clone.STAMP2 = original.STAMP2;
 		}
 	}
 
@@ -386,6 +498,34 @@ public class FireforceModVariables {
 					variables.abilityunlocked4 = message.data.abilityunlocked4;
 					variables.tickspassedsoundfirestage = message.data.tickspassedsoundfirestage;
 					variables.VNscaleup = message.data.VNscaleup;
+					variables.tickspassedtattoshowing = message.data.tickspassedtattoshowing;
+					variables.FlamingInkActive = message.data.FlamingInkActive;
+					variables.YorubaBlacksmithactive = message.data.YorubaBlacksmithactive;
+					variables.YorubaLanceactive = message.data.YorubaLanceactive;
+					variables.cooldown3 = message.data.cooldown3;
+					variables.SlamDunkBurialActive = message.data.SlamDunkBurialActive;
+					variables.staminatickspassed = message.data.staminatickspassed;
+					variables.cooldown4 = message.data.cooldown4;
+					variables.cooldown5 = message.data.cooldown5;
+					variables.cooldown6 = message.data.cooldown6;
+					variables.hastephrosis = message.data.hastephrosis;
+					variables.overheatstaminatickspassed = message.data.overheatstaminatickspassed;
+					variables.karma = message.data.karma;
+					variables.affiliation = message.data.affiliation;
+					variables.devilsflightlevel = message.data.devilsflightlevel;
+					variables.tickspassedflight = message.data.tickspassedflight;
+					variables.learnedcorna = message.data.learnedcorna;
+					variables.fireparticleticks = message.data.fireparticleticks;
+					variables.rapidmankick = message.data.rapidmankick;
+					variables.abilityunlocked5 = message.data.abilityunlocked5;
+					variables.abilityunlocked6 = message.data.abilityunlocked6;
+					variables.reflectactive = message.data.reflectactive;
+					variables.reflect = message.data.reflect;
+					variables.firexpactive = message.data.firexpactive;
+					variables.adollacooldown = message.data.adollacooldown;
+					variables.stamp = message.data.stamp;
+					variables.STAMP = message.data.STAMP;
+					variables.STAMP2 = message.data.STAMP2;
 				}
 			});
 			context.setPacketHandled(true);

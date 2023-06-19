@@ -1,0 +1,20 @@
+newmtl m_8711214e-4f51-0d9b-7e96-903c186ca9b2
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+map_Kd fireforce:blocks/
+Ns 100.0
+d 1.0
+newmtl m_759eb443-aae4-0c93-36ab-6a59b828499c
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+map_Kd fireforce:blocks/
+Ns 100.0
+d 1.0
+newmtl none
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+Ns 100.0
+d 1.0

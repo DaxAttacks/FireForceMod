@@ -42,7 +42,7 @@ public class IgnitionAbility2KeyBinding extends FireforceModElements.ModElement 
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.fireforce.ignition_ability_2", GLFW.GLFW_KEY_X, "key.categories.misc");
+		keys = new KeyBinding("key.fireforce.ignition_ability_2", GLFW.GLFW_KEY_X, "key.categories.fireforce");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

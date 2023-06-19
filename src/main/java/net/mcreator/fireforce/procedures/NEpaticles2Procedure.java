@@ -36,6 +36,13 @@ public class NEpaticles2Procedure {
 							"particle minecraft:flame ^ ^2 ^ 2 0.6 0.5 999 999 force");
 				}
 			}
+			{
+				Entity _ent = immediatesourceentity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"particle fireforce:fireparticle_1 ^ ^ ^");
+				}
+			}
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -69,6 +76,13 @@ public class NEpaticles2Procedure {
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
 							"particle minecraft:flame ^ ^2 ^ 2 0.6 0.5 999 999 force");
+				}
+			}
+			{
+				Entity _ent = immediatesourceentity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"particle fireforce:fireparticle_1 ^ ^ ^");
 				}
 			}
 			new Object() {
@@ -106,6 +120,13 @@ public class NEpaticles2Procedure {
 							"particle minecraft:flame ^ ^2 ^ 0.5 0.6 2 999 999 force");
 				}
 			}
+			{
+				Entity _ent = immediatesourceentity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"particle fireforce:fireparticle_1 ^ ^ ^");
+				}
+			}
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -139,6 +160,13 @@ public class NEpaticles2Procedure {
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
 							"particle minecraft:flame ^ ^2 ^ 0.5 0.6 2 999 999 force");
+				}
+			}
+			{
+				Entity _ent = immediatesourceentity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"particle fireforce:fireparticle_1 ^ ^ ^");
 				}
 			}
 			new Object() {

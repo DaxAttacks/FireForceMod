@@ -32,7 +32,7 @@ public class AdollaBurstAbilityKeyBinding extends FireforceModElements.ModElemen
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.fireforce.adolla_burst_ability", GLFW.GLFW_KEY_B, "key.categories.fireforce");
+		keys = new KeyBinding("key.fireforce.adolla_burst_ability", GLFW.GLFW_KEY_B, "key.categories.misc");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

@@ -1,0 +1,183 @@
+{
+  "_fv": 33,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGHEST",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "ability1.png",
+          "use1Xscale": true,
+          "name": "ability1.png",
+          "x": 407,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability1.png",
+          "use1Xscale": true,
+          "name": "ability1.png",
+          "x": 384,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability1.png",
+          "use1Xscale": true,
+          "name": "ability1.png",
+          "x": 361,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line.png",
+          "use1Xscale": true,
+          "name": "line.png",
+          "x": 378,
+          "y": 184
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line.png",
+          "use1Xscale": true,
+          "name": "line.png",
+          "x": 401,
+          "y": 184
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability1.png",
+          "use1Xscale": true,
+          "name": "ability1.png",
+          "x": 384,
+          "y": 200
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line2.png",
+          "use1Xscale": true,
+          "name": "line2.png",
+          "x": 391,
+          "y": 194
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "absorb.png",
+          "use1Xscale": true,
+          "name": "absorb.png",
+          "x": 384,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "absorb1.png",
+          "use1Xscale": true,
+          "name": "absorb1.png",
+          "x": 361,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "absorb2.png",
+          "use1Xscale": true,
+          "name": "absorb2.png",
+          "x": 407,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "absorb3.png",
+          "use1Xscale": true,
+          "name": "absorb3.png",
+          "x": 384,
+          "y": 200
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "locked.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Lock1"
+          },
+          "name": "locked.png",
+          "x": 365,
+          "y": 181
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "locked.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Lock3"
+          },
+          "name": "locked.png",
+          "x": 388,
+          "y": 204
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "locked.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Lock2"
+          },
+          "name": "locked.png",
+          "x": 411,
+          "y": 181
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Heat Absorbed: <VAR:integer:heatabsorbed>",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "Heat Absorbed: <VAR:integer:heatabsorbed>",
+          "x": 394,
+          "y": -29
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "Showabs"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

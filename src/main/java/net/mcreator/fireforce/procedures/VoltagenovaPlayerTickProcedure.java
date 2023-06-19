@@ -98,9 +98,7 @@ public class VoltagenovaPlayerTickProcedure {
 				if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).tickspassed >= 100) {
 					if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen > (entity
-									.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen - 10) {
+							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen > 10) {
 						if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen > 0) {
 							if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -211,9 +209,7 @@ public class VoltagenovaPlayerTickProcedure {
 									.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new FireforceModVariables.PlayerVariables())).FireOxygenMax) {
 						if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen >= (entity
-										.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen - 20) {
+								.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen >= 20) {
 							if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new FireforceModVariables.PlayerVariables())).tickspassed >= 200) {
 								{
@@ -318,9 +314,7 @@ public class VoltagenovaPlayerTickProcedure {
 				if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).tickspassed >= 300) {
 					if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen >= (entity
-									.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen - 30) {
+							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen >= 30) {
 						if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen > 0) {
 							if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -427,9 +421,7 @@ public class VoltagenovaPlayerTickProcedure {
 				if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireforceModVariables.PlayerVariables())).tickspassed >= 400) {
 					if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen >= (entity
-									.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen - 40) {
+							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen >= 40) {
 						if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen > 0) {
 							if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)

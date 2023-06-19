@@ -12,7 +12,10 @@ import net.minecraft.entity.Entity;
 import net.mcreator.fireforce.FireforceModVariables;
 import net.mcreator.fireforce.FireforceMod;
 
+import java.util.stream.Stream;
 import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 public class GetArrowProcedure {
 
@@ -29,6 +32,9 @@ public class GetArrowProcedure {
 		}
 		IWorld world = (IWorld) dependencies.get("world");
 		Entity entity = (Entity) dependencies.get("entity");
+
+		ResetProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		{
 			double _setval = 3;
 			entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

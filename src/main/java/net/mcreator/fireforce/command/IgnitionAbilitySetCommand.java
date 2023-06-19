@@ -24,9 +24,8 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 public class IgnitionAbilitySetCommand {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent event) {
-		event.getDispatcher().register(LiteralArgumentBuilder.<CommandSource>literal("IA_set_arrow")
-
-				.executes(arguments -> {
+		event.getDispatcher()
+				.register(LiteralArgumentBuilder.<CommandSource>literal("IA_set_arrow").requires(s -> s.hasPermissionLevel(4)).executes(arguments -> {
 					ServerWorld world = arguments.getSource().getWorld();
 					double x = arguments.getSource().getPos().getX();
 					double y = arguments.getSource().getPos().getY();

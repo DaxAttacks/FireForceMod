@@ -1,0 +1,7 @@
+{
+  "parent": "fireforce:custom/hellfire_-_converted",
+  "textures": {
+    "0": "fireforce:blocks/hellfire13",
+    "particle": "fireforce:items/projectiles"
+  }
+}

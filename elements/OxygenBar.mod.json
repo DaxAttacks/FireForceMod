@@ -150,14 +150,24 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:integer:tickspassed>",
+          "text": "Oxygen: <VAR:integer:FireOxygen>",
           "color": {
-            "value": -52429,
+            "value": -3407872,
             "falpha": 0.0
           },
-          "name": "<VAR:integer:tickspassed>",
-          "x": 294,
-          "y": 53
+          "name": "Oxygen: <VAR:integer:FireOxygen>",
+          "x": -89,
+          "y": 230
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line3.png",
+          "use1Xscale": true,
+          "name": "line3.png",
+          "x": 413,
+          "y": 207
         }
       }
     ],
@@ -171,7 +181,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

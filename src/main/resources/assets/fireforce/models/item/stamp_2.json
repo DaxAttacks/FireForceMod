@@ -1,0 +1,7 @@
+{
+  "parent": "fireforce:custom/stamp2",
+  "textures": {
+    "0": "fireforce:blocks/stamp",
+    "particle": "fireforce:items/stamp"
+  }
+}

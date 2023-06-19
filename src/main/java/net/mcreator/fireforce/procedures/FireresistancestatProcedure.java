@@ -20,7 +20,7 @@ public class FireresistancestatProcedure {
 				.orElse(new FireforceModVariables.PlayerVariables())).SP >= 1) {
 			{
 				double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireforceModVariables.PlayerVariables())).FireOxygenMax + 100);
+						.orElse(new FireforceModVariables.PlayerVariables())).FireOxygenMax + 10);
 				entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.FireOxygenMax = _setval;
 					capability.syncPlayerVariables(entity);

@@ -1,6 +1,6 @@
 {
   "adollalink": {
-    "category": "player",
+    "category": "ambient",
     "sounds": [
       {
         "name": "fireforce:adolla-link-sound-effect-fire-force-by-tuna.voicemod.net",
@@ -8,17 +8,44 @@
       }
     ]
   },
-  "firewindsound": {
-    "category": "player",
+  "flaminginksound": {
+    "category": "ambient",
     "sounds": [
       {
-        "name": "fireforce:untitled-video-made-with-clipchamp",
+        "name": "fireforce:mixkit-big-fire-burning-1335",
+        "stream": false
+      }
+    ]
+  },
+  "skateboardsound": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "fireforce:untitled-video-made-with-clipchamp-_9_",
+        "stream": false
+      }
+    ]
+  },
+  "wind": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "fireforce:wind_1",
+        "stream": false
+      }
+    ]
+  },
+  "rapid1": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "fireforce:rapid1",
         "stream": false
       }
     ]
   },
   "novaexpelsound": {
-    "category": "player",
+    "category": "ambient",
     "sounds": [
       {
         "name": "fireforce:untitled-video-made-with-clipchamp-_1_",
@@ -26,11 +53,47 @@
       }
     ]
   },
+  "firewindsound": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "fireforce:untitled-video-made-with-clipchamp",
+        "stream": false
+      }
+    ]
+  },
+  "firestartflight": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "fireforce:firestartflight_1",
+        "stream": false
+      }
+    ]
+  },
   "firewind": {
-    "category": "player",
+    "category": "ambient",
     "sounds": [
       {
         "name": "fireforce:untitled-video-made-with-clipchamp-_2_",
+        "stream": false
+      }
+    ]
+  },
+  "fireflight": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "fireforce:fireflight",
+        "stream": false
+      }
+    ]
+  },
+  "rapid2": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "fireforce:rapid2",
         "stream": false
       }
     ]

@@ -40,7 +40,7 @@
       "name": "NE2"
     },
     "onBulletFlyingTick": {
-      "name": "NEpaticles2"
+      "name": "VoltagaNovaExpelWhileProjectileFlyingTick"
     }
   }
 }

@@ -4,6 +4,9 @@
   "definition": {
     "triggerKey": "C",
     "keyBindingName": "Ignition Ability 3",
-    "keyBindingCategoryKey": "misc"
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "KeyC"
+    }
   }
 }

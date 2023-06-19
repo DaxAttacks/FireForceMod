@@ -1,0 +1,7 @@
+{
+  "parent": "fireforce:custom/adollabugitem",
+  "textures": {
+    "0": "fireforce:blocks/adollabug",
+    "particle": "fireforce:items/screenshot_2023-05-24_220316"
+  }
+}

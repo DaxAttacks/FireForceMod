@@ -24,8 +24,7 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 public class GenerationsetInfernalCommand {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent event) {
-		event.getDispatcher().register(LiteralArgumentBuilder.<CommandSource>literal("generation_set_infernal")
-
+		event.getDispatcher().register(LiteralArgumentBuilder.<CommandSource>literal("generation_set_infernal").requires(s -> s.hasPermissionLevel(4))
 				.executes(arguments -> {
 					ServerWorld world = arguments.getSource().getWorld();
 					double x = arguments.getSource().getPos().getX();

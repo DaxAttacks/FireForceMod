@@ -1,0 +1,170 @@
+{
+  "_fv": 33,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGHEST",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "ability1.png",
+          "use1Xscale": true,
+          "name": "ability1.png",
+          "x": 407,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability1.png",
+          "use1Xscale": true,
+          "name": "ability1.png",
+          "x": 384,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability1.png",
+          "use1Xscale": true,
+          "name": "ability1.png",
+          "x": 361,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability1.png",
+          "use1Xscale": true,
+          "name": "ability1.png",
+          "x": 384,
+          "y": 154
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rapid.png",
+          "use1Xscale": true,
+          "name": "rapid.png",
+          "x": 384,
+          "y": 154
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "flight.png",
+          "use1Xscale": true,
+          "name": "flight.png",
+          "x": 361,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hell_fire.png.png",
+          "use1Xscale": true,
+          "name": "hell_fire.png.png",
+          "x": 411,
+          "y": 181
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "devilsfootprint.png",
+          "use1Xscale": true,
+          "name": "devilsfootprint.png",
+          "x": 384,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line.png",
+          "use1Xscale": true,
+          "name": "line.png",
+          "x": 378,
+          "y": 184
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line.png",
+          "use1Xscale": true,
+          "name": "line.png",
+          "x": 401,
+          "y": 184
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "line2.png",
+          "use1Xscale": true,
+          "name": "line2.png",
+          "x": 391,
+          "y": 171
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "locked.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Lock1"
+          },
+          "name": "locked.png",
+          "x": 365,
+          "y": 181
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "locked.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Lock2"
+          },
+          "name": "locked.png",
+          "x": 388,
+          "y": 158
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "locked.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Lock3"
+          },
+          "name": "locked.png",
+          "x": 411,
+          "y": 181
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "ShowDF"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

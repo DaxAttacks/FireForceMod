@@ -14,6 +14,9 @@ import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.fireforce.procedures.GetplayercardsProcedure;
+import net.mcreator.fireforce.procedures.Getplayercards3Procedure;
+import net.mcreator.fireforce.procedures.Getplayercards2Procedure;
 import net.mcreator.fireforce.procedures.GenInfernalProcedure;
 import net.mcreator.fireforce.procedures.Gen6Procedure;
 import net.mcreator.fireforce.procedures.Gen5Procedure;
@@ -63,8 +66,23 @@ public class CharacterProfileGuiWindow extends ContainerScreen<CharacterProfileG
 		RenderSystem.defaultBlendFunc();
 
 		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("fireforce:textures/screens/updatedui1.png"));
-		this.blit(ms, this.guiLeft + 102, this.guiTop + 122, 0, 0, 270, 270, 270, 270);
+		this.blit(ms, this.guiLeft + 106, this.guiTop + 123, 0, 0, 270, 270, 270, 270);
 
+		if (GetplayercardsProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("fireforce:textures/screens/playercard1.png"));
+			this.blit(ms, this.guiLeft + 106, this.guiTop + 123, 0, 0, 270, 270, 270, 270);
+		}
+		if (Getplayercards2Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("fireforce:textures/screens/playercard2.png"));
+			this.blit(ms, this.guiLeft + 106, this.guiTop + 123, 0, 0, 270, 270, 270, 270);
+		}
+		if (Getplayercards3Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("fireforce:textures/screens/playercard3.png"));
+			this.blit(ms, this.guiLeft + 106, this.guiTop + 123, 0, 0, 270, 270, 270, 270);
+		}
 		RenderSystem.disableBlend();
 	}
 
@@ -86,26 +104,24 @@ public class CharacterProfileGuiWindow extends ContainerScreen<CharacterProfileG
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		if (GenInfernalProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
-			this.font.drawString(ms, "Infernal", 223, 168, -16777216);
+			this.font.drawString(ms, "Infernal", 225, 154, -16777216);
 		if (Gen2Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
-			this.font.drawString(ms, "Second Generation", 203, 169, -16777216);
+			this.font.drawString(ms, "Second Generation", 203, 154, -16777216);
 		if (Gen3Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
-			this.font.drawString(ms, "Third Generation", 203, 169, -16777216);
+			this.font.drawString(ms, "Third Generation", 203, 154, -16777216);
 		if (Gen4Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
-			this.font.drawString(ms, "Fourth Generation", 203, 169, -16777216);
+			this.font.drawString(ms, "Fourth Generation", 201, 154, -16777216);
 		if (Gen6Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
-			this.font.drawString(ms, "Hybrid", 229, 168, -16777216);
+			this.font.drawString(ms, "Hybrid", 226, 154, -16777216);
 		if (Gen5Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
 				(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll)))
-			this.font.drawString(ms, "Demon Infernal", 208, 169, -16777216);
-		this.font.drawString(ms, "" + ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).PlayerName) + "", 228, 156, -16777216);
+			this.font.drawString(ms, "Demon Infernal", 211, 153, -16777216);
 		this.font.drawString(ms, "Level: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).LVL) + "", 238, 356, -16777216);
+				.orElse(new FireforceModVariables.PlayerVariables())).LVL) + "", 245, 358, -16777216);
 	}
 
 	@Override
@@ -118,13 +134,13 @@ public class CharacterProfileGuiWindow extends ContainerScreen<CharacterProfileG
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 247, this.guiTop + 188, 51, 20, new StringTextComponent("STATS"), e -> {
+		this.addButton(new Button(this.guiLeft + 251, this.guiTop + 184, 51, 20, new StringTextComponent("STATS"), e -> {
 			if (true) {
 				FireforceMod.PACKET_HANDLER.sendToServer(new CharacterProfileGui.ButtonPressedMessage(0, x, y, z));
 				CharacterProfileGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 245, this.guiTop + 216, 56, 20, new StringTextComponent("SKILLS"), e -> {
+		this.addButton(new Button(this.guiLeft + 249, this.guiTop + 214, 56, 20, new StringTextComponent("WIP"), e -> {
 			if (true) {
 				FireforceMod.PACKET_HANDLER.sendToServer(new CharacterProfileGui.ButtonPressedMessage(1, x, y, z));
 				CharacterProfileGui.handleButtonAction(entity, 1, x, y, z);

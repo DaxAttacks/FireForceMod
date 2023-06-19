@@ -1,0 +1,21 @@
+{
+  "_fv": 33,
+  "_type": "particle",
+  "definition": {
+    "texture": "fireparticle2.png",
+    "animate": true,
+    "frameDuration": 2,
+    "width": 0.6,
+    "height": 0.6,
+    "scale": 16.0,
+    "speedFactor": 1.0,
+    "gravity": 0.0,
+    "maxAge": 7,
+    "maxAgeDiff": 0,
+    "angularVelocity": 0.0,
+    "angularAcceleration": 0.0,
+    "canCollide": true,
+    "alwaysShow": true,
+    "renderType": "OPAQUE"
+  }
+}

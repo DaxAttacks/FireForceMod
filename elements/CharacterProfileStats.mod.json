@@ -122,12 +122,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Level: <VAR:integer:LVL>",
+          "text": "Fire Power: <VAR:FirePower>",
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "name": "Level: <VAR:integer:LVL>",
+          "name": "Fire Power: <VAR:FirePower>",
           "x": 203,
           "y": 226
         }
@@ -259,7 +259,7 @@
           "width": 30,
           "height": 20,
           "name": "+",
-          "x": 147,
+          "x": 146,
           "y": 136
         }
       },

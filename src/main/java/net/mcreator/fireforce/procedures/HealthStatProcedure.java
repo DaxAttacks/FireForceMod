@@ -20,10 +20,10 @@ public class HealthStatProcedure {
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).SP >= 10) {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireforceModVariables.PlayerVariables())).FireHealth < 10) {
+					.orElse(new FireforceModVariables.PlayerVariables())).FireHealth < 100) {
 				{
 					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).FireHealth + 1);
+							.orElse(new FireforceModVariables.PlayerVariables())).FireHealth + 10);
 					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.FireHealth = _setval;
 						capability.syncPlayerVariables(entity);

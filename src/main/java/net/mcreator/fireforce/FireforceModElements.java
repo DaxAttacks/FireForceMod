@@ -49,11 +49,22 @@ public class FireforceModElements {
 	public FireforceModElements() {
 		sounds.put(new ResourceLocation("fireforce", "adollalink"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "adollalink")));
-		sounds.put(new ResourceLocation("fireforce", "firewindsound"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "firewindsound")));
+		sounds.put(new ResourceLocation("fireforce", "flaminginksound"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "flaminginksound")));
+		sounds.put(new ResourceLocation("fireforce", "skateboardsound"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "skateboardsound")));
+		sounds.put(new ResourceLocation("fireforce", "wind"), new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "wind")));
+		sounds.put(new ResourceLocation("fireforce", "rapid1"), new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "rapid1")));
 		sounds.put(new ResourceLocation("fireforce", "novaexpelsound"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "novaexpelsound")));
+		sounds.put(new ResourceLocation("fireforce", "firewindsound"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "firewindsound")));
+		sounds.put(new ResourceLocation("fireforce", "firestartflight"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "firestartflight")));
 		sounds.put(new ResourceLocation("fireforce", "firewind"), new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "firewind")));
+		sounds.put(new ResourceLocation("fireforce", "fireflight"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "fireflight")));
+		sounds.put(new ResourceLocation("fireforce", "rapid2"), new net.minecraft.util.SoundEvent(new ResourceLocation("fireforce", "rapid2")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("fireforce").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

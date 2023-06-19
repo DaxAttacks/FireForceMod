@@ -16,8 +16,8 @@
           "image": "updatedui1.png",
           "use1Xscale": true,
           "name": "updatedui1.png",
-          "x": 66,
-          "y": -8
+          "x": 70,
+          "y": -7
         }
       },
       {
@@ -30,8 +30,8 @@
           "width": 51,
           "height": 20,
           "name": "STATS",
-          "x": 211,
-          "y": 58
+          "x": 215,
+          "y": 54
         }
       },
       {
@@ -46,8 +46,8 @@
             "name": "GenInfernal"
           },
           "name": "Infernal",
-          "x": 187,
-          "y": 38
+          "x": 189,
+          "y": 24
         }
       },
       {
@@ -63,7 +63,7 @@
           },
           "name": "Second Generation",
           "x": 167,
-          "y": 39
+          "y": 24
         }
       },
       {
@@ -79,7 +79,7 @@
           },
           "name": "Third Generation",
           "x": 167,
-          "y": 39
+          "y": 24
         }
       },
       {
@@ -94,8 +94,8 @@
             "name": "Gen4"
           },
           "name": "Fourth Generation",
-          "x": 167,
-          "y": 39
+          "x": 165,
+          "y": 24
         }
       },
       {
@@ -110,8 +110,8 @@
             "name": "Gen6"
           },
           "name": "Hybrid",
-          "x": 193,
-          "y": 38
+          "x": 190,
+          "y": 24
         }
       },
       {
@@ -126,21 +126,8 @@
             "name": "Gen5"
           },
           "name": "Demon Infernal",
-          "x": 172,
-          "y": 39
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "<VAR:PlayerName>",
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "name": "<VAR:PlayerName>",
-          "x": 192,
-          "y": 26
+          "x": 175,
+          "y": 23
         }
       },
       {
@@ -152,27 +139,66 @@
             "falpha": 0.0
           },
           "name": "Level: <VAR:integer:LVL>",
-          "x": 202,
-          "y": 226
+          "x": 209,
+          "y": 228
         }
       },
       {
         "type": "button",
         "data": {
-          "text": "SKILLS",
+          "text": "WIP",
           "width": 56,
           "height": 20,
-          "name": "SKILLS",
-          "x": 209,
-          "y": 86
+          "name": "WIP",
+          "x": 213,
+          "y": 84
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "playercard1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Getplayercards"
+          },
+          "name": "playercard1.png",
+          "x": 70,
+          "y": -7
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "playercard2.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Getplayercards2"
+          },
+          "name": "playercard2.png",
+          "x": 70,
+          "y": -7
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "playercard3.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Getplayercards3"
+          },
+          "name": "playercard3.png",
+          "x": 70,
+          "y": -7
         }
       }
     ],
     "gridSettings": {
-      "sx": 18,
-      "sy": 18,
-      "ox": 11,
-      "oy": 15,
+      "sx": 32,
+      "sy": 32,
+      "ox": 22,
+      "oy": 30,
       "snapOnGrid": false
     }
   }

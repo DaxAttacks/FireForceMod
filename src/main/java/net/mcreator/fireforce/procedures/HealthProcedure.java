@@ -45,7 +45,7 @@ public class HealthProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		double maxhealth = 0;
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 1) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 10) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -54,7 +54,7 @@ public class HealthProcedure {
 				}
 			}
 		} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 2) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 20) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -63,7 +63,7 @@ public class HealthProcedure {
 				}
 			}
 		} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 3) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 30) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -72,7 +72,7 @@ public class HealthProcedure {
 				}
 			}
 		} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 4) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 40) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -81,7 +81,7 @@ public class HealthProcedure {
 				}
 			}
 		} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 5) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 50) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -90,7 +90,7 @@ public class HealthProcedure {
 				}
 			}
 		} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 6) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 60) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -99,7 +99,7 @@ public class HealthProcedure {
 				}
 			}
 		} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 7) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 70) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -108,7 +108,7 @@ public class HealthProcedure {
 				}
 			}
 		} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 8) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 80) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -117,7 +117,7 @@ public class HealthProcedure {
 				}
 			}
 		} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 9) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 90) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
@@ -126,7 +126,7 @@ public class HealthProcedure {
 				}
 			}
 		} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 10) {
+				.orElse(new FireforceModVariables.PlayerVariables())).FireHealth == 100) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {

@@ -125,9 +125,12 @@ public class OxygenBarOverlay {
 					Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -243, posY + 41, 0, 0, 112, 112, 112, 112);
 				}
 				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(),
-						"" + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new FireforceModVariables.PlayerVariables())).tickspassed) + "",
-						posX + 81, posY + -67, -52429);
+						"Oxygen: " + (int) ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen) + "",
+						posX + -302, posY + 110, -3407872);
+				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("fireforce:textures/screens/line3.png"));
+				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + 200, posY + 87, 0, 0, 8, 8, 8, 8);
+
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.enableDepthTest();

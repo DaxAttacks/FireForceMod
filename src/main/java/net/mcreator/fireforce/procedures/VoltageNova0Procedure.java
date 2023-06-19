@@ -1,5 +1,7 @@
 package net.mcreator.fireforce.procedures;
 
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireforce.FireforceModVariables;
@@ -19,9 +21,7 @@ public class VoltageNova0Procedure {
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).voltagenovastage == 0) {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen >= (entity
-							.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygenMax * 0.2) {
+					.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen >= 100) {
 				{
 					double _setval = 1;
 					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -31,37 +31,18 @@ public class VoltageNova0Procedure {
 				}
 				{
 					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen
-							- (entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new FireforceModVariables.PlayerVariables())).FireOxygenMax * 0.2);
+							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen - 100);
 					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.FireOxygen = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 			} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireforceModVariables.PlayerVariables())).FireOverheatlevel < 6) {
-				{
-					double _setval = 1;
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.voltagenovastage = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = 0;
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.FireOxygen = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireforceModVariables.PlayerVariables())).FireOverheatlevel + 1);
-					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.FireOverheatlevel = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					.orElse(new FireforceModVariables.PlayerVariables())).FireOxygen < (entity
+							.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new FireforceModVariables.PlayerVariables())).FireOxygenMax * 0.2) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Not Enough Stamina"), (true));
 				}
 			}
 		}

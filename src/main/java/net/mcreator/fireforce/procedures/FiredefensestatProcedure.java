@@ -1,5 +1,7 @@
 package net.mcreator.fireforce.procedures;
 
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireforce.FireforceModVariables;
@@ -19,7 +21,7 @@ public class FiredefensestatProcedure {
 		if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireforceModVariables.PlayerVariables())).SP >= 1) {
 			if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireforceModVariables.PlayerVariables())).FireResistancedefense <= 5) {
+					.orElse(new FireforceModVariables.PlayerVariables())).FireResistancedefense <= 50) {
 				{
 					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new FireforceModVariables.PlayerVariables())).FireResistancedefense + 1);
@@ -29,6 +31,13 @@ public class FiredefensestatProcedure {
 					});
 				}
 				{
+					Entity _ent = entity;
+					if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+						_ent.world.getServer().getCommandManager().handleCommand(
+								_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4), "scale add pehkui:defense 0.1 @s");
+					}
+				}
+				{
 					double _setval = ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new FireforceModVariables.PlayerVariables())).SP - 1);
 					entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -36,6 +45,13 @@ public class FiredefensestatProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+			} else if ((entity.getCapability(FireforceModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireforceModVariables.PlayerVariables())).FireResistancedefense >= 50) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("This stat has been maxed out"), (false));
+				}
+				if (entity instanceof PlayerEntity)
+					((PlayerEntity) entity).closeScreen();
 			}
 		}
 	}
